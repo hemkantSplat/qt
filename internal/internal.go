@@ -18,6 +18,29 @@ import (
 	"unsafe"
 )
 
+func interfaceToStringArray(i interface{}) []string {
+	if i == nil {
+		return nil
+	}
+	switch i.(type) {
+	case []interface{}:
+		if len(i.([]interface{})) == 0 {
+			return []string{}
+		}
+		ifs := i.([]interface{})
+		o := []string{}
+		for _, fn := range ifs {
+			o = append(o, fn.(string))
+		}
+		return o
+	case interface{}:
+		return i.([]string)
+
+	default:
+		panic("expected interface or []interface, but got something else")
+	}
+}
+
 type Internal struct {
 	PtrI       uintptr `json:"___pointer"`
 	ClassNameI string  `json:"___className"`
@@ -214,7 +237,11 @@ func CallLocalAndDeregisterRemoteFunction(l []interface{}) {
 }
 
 func CallLocalFunction(l []interface{}) interface{} {
-	msg, _ := json.Marshal(convertToJson(l))
+	msg, err := json.Marshal(convertToJson(l))
+	if err != nil {
+		println("failed to marshal message:", err.Error())
+		return nil
+	}
 	var output interface{}
 	json.Unmarshal([]byte(syncCallIntoLocal(string(msg))), &output)
 
