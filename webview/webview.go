@@ -1,9 +1,10 @@
+//go:build !minimal
 // +build !minimal
 
 package webview
 
 import (
-	"github.com/therecipe/qt/internal"
+	"github.com/hemkantSplat/qt/internal"
 	"unsafe"
 )
 

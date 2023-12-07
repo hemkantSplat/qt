@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/gui"
-	"github.com/therecipe/qt/quick"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/gui"
+	"github.com/hemkantSplat/qt/quick"
 )
 
 type HelloClientRPC struct {

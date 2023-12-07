@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/widgets"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/widgets"
 )
 
 func containers() {

@@ -9,10 +9,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/therecipe/qt/internal/cmd"
-	"github.com/therecipe/qt/internal/cmd/deploy"
+	"github.com/hemkantSplat/qt/internal/cmd"
+	"github.com/hemkantSplat/qt/internal/cmd/deploy"
 
-	"github.com/therecipe/qt/internal/utils"
+	"github.com/hemkantSplat/qt/internal/utils"
 )
 
 func main() {

@@ -1,12 +1,13 @@
+//go:build !minimal
 // +build !minimal
 
 package sql
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/gui"
-	"github.com/therecipe/qt/internal"
-	"github.com/therecipe/qt/widgets"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/gui"
+	"github.com/hemkantSplat/qt/internal"
+	"github.com/hemkantSplat/qt/widgets"
 	"unsafe"
 )
 
@@ -55,8 +56,9 @@ func NewQSqlFromPointer(ptr unsafe.Pointer) (n *QSql) {
 func (ptr *QSql) DestroyQSql() {
 }
 
+// QSql::Location
+//
 //go:generate stringer -type=QSql__Location
-//QSql::Location
 type QSql__Location int64
 
 const (
@@ -64,8 +66,9 @@ const (
 	QSql__AfterLastRow   QSql__Location = QSql__Location(-2)
 )
 
+// QSql::NumericalPrecisionPolicy
+//
 //go:generate stringer -type=QSql__NumericalPrecisionPolicy
-//QSql::NumericalPrecisionPolicy
 type QSql__NumericalPrecisionPolicy int64
 
 const (
@@ -75,8 +78,9 @@ const (
 	QSql__HighPrecision      QSql__NumericalPrecisionPolicy = QSql__NumericalPrecisionPolicy(0)
 )
 
+// QSql::ParamTypeFlag
+//
 //go:generate stringer -type=QSql__ParamTypeFlag
-//QSql::ParamTypeFlag
 type QSql__ParamTypeFlag int64
 
 const (
@@ -86,8 +90,9 @@ const (
 	QSql__Binary QSql__ParamTypeFlag = QSql__ParamTypeFlag(0x00000004)
 )
 
+// QSql::TableType
+//
 //go:generate stringer -type=QSql__TableType
-//QSql::TableType
 type QSql__TableType int64
 
 const (
@@ -476,8 +481,9 @@ func NewQSqlDriverFromPointer(ptr unsafe.Pointer) (n *QSqlDriver) {
 	return
 }
 
+// QSqlDriver::DriverFeature
+//
 //go:generate stringer -type=QSqlDriver__DriverFeature
-//QSqlDriver::DriverFeature
 type QSqlDriver__DriverFeature int64
 
 const (
@@ -498,8 +504,9 @@ const (
 	QSqlDriver__CancelQuery            QSqlDriver__DriverFeature = QSqlDriver__DriverFeature(14)
 )
 
+// QSqlDriver::StatementType
+//
 //go:generate stringer -type=QSqlDriver__StatementType
-//QSqlDriver::StatementType
 type QSqlDriver__StatementType int64
 
 const (
@@ -510,8 +517,9 @@ const (
 	QSqlDriver__DeleteStatement QSqlDriver__StatementType = QSqlDriver__StatementType(4)
 )
 
+// QSqlDriver::IdentifierType
+//
 //go:generate stringer -type=QSqlDriver__IdentifierType
-//QSqlDriver::IdentifierType
 type QSqlDriver__IdentifierType int64
 
 const (
@@ -519,8 +527,9 @@ const (
 	QSqlDriver__TableName QSqlDriver__IdentifierType = QSqlDriver__IdentifierType(1)
 )
 
+// QSqlDriver::NotificationSource
+//
 //go:generate stringer -type=QSqlDriver__NotificationSource
-//QSqlDriver::NotificationSource
 type QSqlDriver__NotificationSource int64
 
 const (
@@ -1510,8 +1519,9 @@ func NewQSqlErrorFromPointer(ptr unsafe.Pointer) (n *QSqlError) {
 	return
 }
 
+// QSqlError::ErrorType
+//
 //go:generate stringer -type=QSqlError__ErrorType
-//QSqlError::ErrorType
 type QSqlError__ErrorType int64
 
 const (
@@ -1619,8 +1629,9 @@ func NewQSqlFieldFromPointer(ptr unsafe.Pointer) (n *QSqlField) {
 	return
 }
 
+// QSqlField::RequiredStatus
+//
 //go:generate stringer -type=QSqlField__RequiredStatus
-//QSqlField::RequiredStatus
 type QSqlField__RequiredStatus int64
 
 const (
@@ -1948,8 +1959,9 @@ func NewQSqlQueryFromPointer(ptr unsafe.Pointer) (n *QSqlQuery) {
 	return
 }
 
+// QSqlQuery::BatchExecutionMode
+//
 //go:generate stringer -type=QSqlQuery__BatchExecutionMode
-//QSqlQuery::BatchExecutionMode
 type QSqlQuery__BatchExecutionMode int64
 
 const (
@@ -3515,8 +3527,9 @@ func NewQSqlRelationalTableModelFromPointer(ptr unsafe.Pointer) (n *QSqlRelation
 	return
 }
 
+// QSqlRelationalTableModel::JoinMode
+//
 //go:generate stringer -type=QSqlRelationalTableModel__JoinMode
-//QSqlRelationalTableModel::JoinMode
 type QSqlRelationalTableModel__JoinMode int64
 
 const (
@@ -3681,8 +3694,9 @@ func NewQSqlResultFromPointer(ptr unsafe.Pointer) (n *QSqlResult) {
 	return
 }
 
+// QSqlResult::BindingSyntax
+//
 //go:generate stringer -type=QSqlResult__BindingSyntax
-//QSqlResult::BindingSyntax
 type QSqlResult__BindingSyntax int64
 
 const (
@@ -4323,8 +4337,9 @@ func NewQSqlTableModelFromPointer(ptr unsafe.Pointer) (n *QSqlTableModel) {
 	return
 }
 
+// QSqlTableModel::EditStrategy
+//
 //go:generate stringer -type=QSqlTableModel__EditStrategy
-//QSqlTableModel::EditStrategy
 type QSqlTableModel__EditStrategy int64
 
 const (

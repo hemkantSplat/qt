@@ -1,3 +1,4 @@
+//go:build !qml
 // +build !qml
 
 package dialog
@@ -5,10 +6,10 @@ package dialog
 import (
 	"fmt"
 
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/widgets"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/widgets"
 
-	"github.com/therecipe/qt/internal/examples/sql/masterdetail_qml/controller"
+	"github.com/hemkantSplat/qt/internal/examples/sql/masterdetail_qml/controller"
 )
 
 type deleteDialogController struct {

@@ -1,11 +1,12 @@
+//go:build !minimal
 // +build !minimal
 
 package websockets
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/internal"
-	"github.com/therecipe/qt/network"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/internal"
+	"github.com/hemkantSplat/qt/network"
 	"unsafe"
 )
 
@@ -1141,8 +1142,9 @@ func NewQWebSocketProtocolFromPointer(ptr unsafe.Pointer) (n *QWebSocketProtocol
 func (ptr *QWebSocketProtocol) DestroyQWebSocketProtocol() {
 }
 
+// QWebSocketProtocol::CloseCode
+//
 //go:generate stringer -type=QWebSocketProtocol__CloseCode
-//QWebSocketProtocol::CloseCode
 type QWebSocketProtocol__CloseCode int64
 
 const (
@@ -1161,8 +1163,9 @@ const (
 	QWebSocketProtocol__CloseCodeTlsHandshakeFailed    QWebSocketProtocol__CloseCode = QWebSocketProtocol__CloseCode(1015)
 )
 
+// QWebSocketProtocol::Version
+//
 //go:generate stringer -type=QWebSocketProtocol__Version
-//QWebSocketProtocol::Version
 type QWebSocketProtocol__Version int64
 
 const (
@@ -1225,8 +1228,9 @@ func NewQWebSocketServerFromPointer(ptr unsafe.Pointer) (n *QWebSocketServer) {
 	return
 }
 
+// QWebSocketServer::SslMode
+//
 //go:generate stringer -type=QWebSocketServer__SslMode
-//QWebSocketServer::SslMode
 type QWebSocketServer__SslMode int64
 
 const (

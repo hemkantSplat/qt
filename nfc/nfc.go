@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package nfc
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/internal"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/internal"
 	"unsafe"
 )
 
@@ -283,8 +284,9 @@ func NewQNdefNfcSmartPosterRecordFromPointer(ptr unsafe.Pointer) (n *QNdefNfcSma
 	return
 }
 
+// QNdefNfcSmartPosterRecord::Action
+//
 //go:generate stringer -type=QNdefNfcSmartPosterRecord__Action
-//QNdefNfcSmartPosterRecord::Action
 type QNdefNfcSmartPosterRecord__Action int64
 
 const (
@@ -585,8 +587,9 @@ func NewQNdefNfcTextRecordFromPointer(ptr unsafe.Pointer) (n *QNdefNfcTextRecord
 func (ptr *QNdefNfcTextRecord) DestroyQNdefNfcTextRecord() {
 }
 
+// QNdefNfcTextRecord::Encoding
+//
 //go:generate stringer -type=QNdefNfcTextRecord__Encoding
-//QNdefNfcTextRecord::Encoding
 type QNdefNfcTextRecord__Encoding int64
 
 const (
@@ -747,8 +750,9 @@ func NewQNdefRecordFromPointer(ptr unsafe.Pointer) (n *QNdefRecord) {
 	return
 }
 
+// QNdefRecord::TypeNameFormat
+//
 //go:generate stringer -type=QNdefRecord__TypeNameFormat
-//QNdefRecord::TypeNameFormat
 type QNdefRecord__TypeNameFormat int64
 
 const (
@@ -868,8 +872,9 @@ func NewQNearFieldManagerFromPointer(ptr unsafe.Pointer) (n *QNearFieldManager) 
 	return
 }
 
+// QNearFieldManager::AdapterState
+//
 //go:generate stringer -type=QNearFieldManager__AdapterState
-//QNearFieldManager::AdapterState
 type QNearFieldManager__AdapterState int64
 
 const (
@@ -879,8 +884,9 @@ const (
 	QNearFieldManager__TurningOff QNearFieldManager__AdapterState = QNearFieldManager__AdapterState(4)
 )
 
+// QNearFieldManager::TargetAccessMode
+//
 //go:generate stringer -type=QNearFieldManager__TargetAccessMode
-//QNearFieldManager::TargetAccessMode
 type QNearFieldManager__TargetAccessMode int64
 
 const (
@@ -1148,8 +1154,9 @@ func NewQNearFieldShareManagerFromPointer(ptr unsafe.Pointer) (n *QNearFieldShar
 	return
 }
 
+// QNearFieldShareManager::ShareMode
+//
 //go:generate stringer -type=QNearFieldShareManager__ShareMode
-//QNearFieldShareManager::ShareMode
 type QNearFieldShareManager__ShareMode int64
 
 const (
@@ -1158,8 +1165,9 @@ const (
 	QNearFieldShareManager__FileShare QNearFieldShareManager__ShareMode = QNearFieldShareManager__ShareMode(0x02)
 )
 
+// QNearFieldShareManager::ShareError
+//
 //go:generate stringer -type=QNearFieldShareManager__ShareError
-//QNearFieldShareManager::ShareError
 type QNearFieldShareManager__ShareError int64
 
 const (
@@ -1669,8 +1677,9 @@ func NewQNearFieldTargetFromPointer(ptr unsafe.Pointer) (n *QNearFieldTarget) {
 	return
 }
 
+// QNearFieldTarget::Type
+//
 //go:generate stringer -type=QNearFieldTarget__Type
-//QNearFieldTarget::Type
 type QNearFieldTarget__Type int64
 
 const (
@@ -1682,8 +1691,9 @@ const (
 	QNearFieldTarget__MifareTag      QNearFieldTarget__Type = QNearFieldTarget__Type(5)
 )
 
+// QNearFieldTarget::AccessMethod
+//
 //go:generate stringer -type=QNearFieldTarget__AccessMethod
-//QNearFieldTarget::AccessMethod
 type QNearFieldTarget__AccessMethod int64
 
 const (
@@ -1693,8 +1703,9 @@ const (
 	QNearFieldTarget__LlcpAccess            QNearFieldTarget__AccessMethod = QNearFieldTarget__AccessMethod(0x04)
 )
 
+// QNearFieldTarget::Error
+//
 //go:generate stringer -type=QNearFieldTarget__Error
-//QNearFieldTarget::Error
 type QNearFieldTarget__Error int64
 
 const (
@@ -2083,8 +2094,9 @@ func NewQQmlNdefRecordFromPointer(ptr unsafe.Pointer) (n *QQmlNdefRecord) {
 	return
 }
 
+// QQmlNdefRecord::TypeNameFormat
+//
 //go:generate stringer -type=QQmlNdefRecord__TypeNameFormat
-//QQmlNdefRecord::TypeNameFormat
 type QQmlNdefRecord__TypeNameFormat int64
 
 const (

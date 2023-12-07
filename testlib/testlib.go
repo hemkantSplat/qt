@@ -1,11 +1,12 @@
+//go:build !minimal
 // +build !minimal
 
 package testlib
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/internal"
-	"github.com/therecipe/qt/widgets"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/internal"
+	"github.com/hemkantSplat/qt/widgets"
 	"unsafe"
 )
 
@@ -54,8 +55,9 @@ func NewQAbstractItemModelTesterFromPointer(ptr unsafe.Pointer) (n *QAbstractIte
 func (ptr *QAbstractItemModelTester) DestroyQAbstractItemModelTester() {
 }
 
+// QAbstractItemModelTester::FailureReportingMode
+//
 //go:generate stringer -type=QAbstractItemModelTester__FailureReportingMode
-//QAbstractItemModelTester::FailureReportingMode
 type QAbstractItemModelTester__FailureReportingMode int64
 
 const (
@@ -420,8 +422,9 @@ func NewQTestFromPointer(ptr unsafe.Pointer) (n *QTest) {
 func (ptr *QTest) DestroyQTest() {
 }
 
+// QTest::TestFailMode
+//
 //go:generate stringer -type=QTest__TestFailMode
-//QTest::TestFailMode
 type QTest__TestFailMode int64
 
 const (
@@ -429,8 +432,9 @@ const (
 	QTest__Continue QTest__TestFailMode = QTest__TestFailMode(2)
 )
 
+// QTest::QBenchmarkMetric
+//
 //go:generate stringer -type=QTest__QBenchmarkMetric
-//QTest::QBenchmarkMetric
 type QTest__QBenchmarkMetric int64
 
 const (
@@ -467,8 +471,9 @@ const (
 	QTest__RefCPUCycles         QTest__QBenchmarkMetric = QTest__QBenchmarkMetric(30)
 )
 
+// QTest::KeyAction
+//
 //go:generate stringer -type=QTest__KeyAction
-//QTest::KeyAction
 type QTest__KeyAction int64
 
 const (
@@ -478,8 +483,9 @@ const (
 	QTest__Shortcut QTest__KeyAction = QTest__KeyAction(3)
 )
 
+// QTest::MouseAction
+//
 //go:generate stringer -type=QTest__MouseAction
-//QTest::MouseAction
 type QTest__MouseAction int64
 
 const (
@@ -490,8 +496,9 @@ const (
 	QTest__MouseMove    QTest__MouseAction = QTest__MouseAction(4)
 )
 
+// QTest::AttributeIndex
+//
 //go:generate stringer -type=QTest__AttributeIndex
-//QTest::AttributeIndex
 type QTest__AttributeIndex int64
 
 const (
@@ -514,8 +521,9 @@ const (
 	QTest__AI_Iterations    QTest__AttributeIndex = QTest__AttributeIndex(15)
 )
 
+// QTest::LogElementType
+//
 //go:generate stringer -type=QTest__LogElementType
-//QTest::LogElementType
 type QTest__LogElementType int64
 
 const (

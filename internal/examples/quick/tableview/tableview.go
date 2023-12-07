@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/quick"
-	"github.com/therecipe/qt/widgets"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/quick"
+	"github.com/hemkantSplat/qt/widgets"
 )
 
 type QmlBridge struct {

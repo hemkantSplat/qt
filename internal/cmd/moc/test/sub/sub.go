@@ -1,17 +1,17 @@
 package sub
 
 import (
-	"github.com/therecipe/qt/internal/cmd/moc/test/sub/subsub"
+	"github.com/hemkantSplat/qt/internal/cmd/moc/test/sub/subsub"
 
-	"github.com/therecipe/qt/internal/cmd/moc/test/sub/b"
-	abc "github.com/therecipe/qt/internal/cmd/moc/test/sub/c"
-	. "github.com/therecipe/qt/internal/cmd/moc/test/sub/d"
+	"github.com/hemkantSplat/qt/internal/cmd/moc/test/sub/b"
+	abc "github.com/hemkantSplat/qt/internal/cmd/moc/test/sub/c"
+	. "github.com/hemkantSplat/qt/internal/cmd/moc/test/sub/d"
 
-	"github.com/therecipe/qt/internal/cmd/moc/test/sub/bgo"
-	abcgo "github.com/therecipe/qt/internal/cmd/moc/test/sub/cgo"
-	. "github.com/therecipe/qt/internal/cmd/moc/test/sub/dgo"
+	"github.com/hemkantSplat/qt/internal/cmd/moc/test/sub/bgo"
+	abcgo "github.com/hemkantSplat/qt/internal/cmd/moc/test/sub/cgo"
+	. "github.com/hemkantSplat/qt/internal/cmd/moc/test/sub/dgo"
 
-	_ "github.com/therecipe/qt/internal/cmd/moc/test/sub/conf"
+	_ "github.com/hemkantSplat/qt/internal/cmd/moc/test/sub/conf"
 )
 
 //TODO:  duplicate struct name issue

@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package serialport
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/internal"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/internal"
 	"unsafe"
 )
 
@@ -56,8 +57,9 @@ func NewQSerialPortFromPointer(ptr unsafe.Pointer) (n *QSerialPort) {
 	return
 }
 
+// QSerialPort::Direction
+//
 //go:generate stringer -type=QSerialPort__Direction
-//QSerialPort::Direction
 type QSerialPort__Direction int64
 
 const (
@@ -66,8 +68,9 @@ const (
 	QSerialPort__AllDirections QSerialPort__Direction = QSerialPort__Direction(QSerialPort__Input | QSerialPort__Output)
 )
 
+// QSerialPort::BaudRate
+//
 //go:generate stringer -type=QSerialPort__BaudRate
-//QSerialPort::BaudRate
 type QSerialPort__BaudRate int64
 
 const (
@@ -82,8 +85,9 @@ const (
 	QSerialPort__UnknownBaud QSerialPort__BaudRate = QSerialPort__BaudRate(-1)
 )
 
+// QSerialPort::DataBits
+//
 //go:generate stringer -type=QSerialPort__DataBits
-//QSerialPort::DataBits
 type QSerialPort__DataBits int64
 
 const (
@@ -94,8 +98,9 @@ const (
 	QSerialPort__UnknownDataBits QSerialPort__DataBits = QSerialPort__DataBits(-1)
 )
 
+// QSerialPort::Parity
+//
 //go:generate stringer -type=QSerialPort__Parity
-//QSerialPort::Parity
 type QSerialPort__Parity int64
 
 const (
@@ -107,8 +112,9 @@ const (
 	QSerialPort__UnknownParity QSerialPort__Parity = QSerialPort__Parity(-1)
 )
 
+// QSerialPort::StopBits
+//
 //go:generate stringer -type=QSerialPort__StopBits
-//QSerialPort::StopBits
 type QSerialPort__StopBits int64
 
 const (
@@ -118,8 +124,9 @@ const (
 	QSerialPort__UnknownStopBits QSerialPort__StopBits = QSerialPort__StopBits(-1)
 )
 
+// QSerialPort::FlowControl
+//
 //go:generate stringer -type=QSerialPort__FlowControl
-//QSerialPort::FlowControl
 type QSerialPort__FlowControl int64
 
 const (
@@ -129,8 +136,9 @@ const (
 	QSerialPort__UnknownFlowControl QSerialPort__FlowControl = QSerialPort__FlowControl(-1)
 )
 
+// QSerialPort::PinoutSignal
+//
 //go:generate stringer -type=QSerialPort__PinoutSignal
-//QSerialPort::PinoutSignal
 type QSerialPort__PinoutSignal int64
 
 const (
@@ -147,8 +155,9 @@ const (
 	QSerialPort__SecondaryReceivedDataSignal    QSerialPort__PinoutSignal = QSerialPort__PinoutSignal(0x200)
 )
 
+// QSerialPort::SerialPortError
+//
 //go:generate stringer -type=QSerialPort__SerialPortError
-//QSerialPort::SerialPortError
 type QSerialPort__SerialPortError int64
 
 const (

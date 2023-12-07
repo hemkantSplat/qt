@@ -1,4 +1,4 @@
-module github.com/therecipe/qt
+module github.com/hemkantSplat/qt
 
 go 1.21.0
 

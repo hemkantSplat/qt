@@ -10,7 +10,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/therecipe/qt/internal/utils"
+	"github.com/hemkantSplat/qt/internal/utils"
 )
 
 func (c *Class) fix() {
@@ -36,8 +36,8 @@ func (c *Class) fixFunctions(fix func(*Function)) {
 	}
 }
 
-//TODO: (*Enum) IsSupported
-//TODO: merge into (*Class).removeEnums_Version
+// TODO: (*Enum) IsSupported
+// TODO: merge into (*Class).removeEnums_Version
 func (c *Class) fixEnums() {
 	for _, e := range c.Enums {
 		if e.Fullname == "QVariant::Type" {

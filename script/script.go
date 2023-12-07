@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package script
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/internal"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/internal"
 	"unsafe"
 )
 
@@ -50,8 +51,9 @@ func NewQScriptClassFromPointer(ptr unsafe.Pointer) (n *QScriptClass) {
 	return
 }
 
+// QScriptClass::QueryFlag
+//
 //go:generate stringer -type=QScriptClass__QueryFlag
-//QScriptClass::QueryFlag
 type QScriptClass__QueryFlag int64
 
 const (
@@ -59,8 +61,9 @@ const (
 	QScriptClass__HandlesWriteAccess QScriptClass__QueryFlag = QScriptClass__QueryFlag(0x02)
 )
 
+// QScriptClass::Extension
+//
 //go:generate stringer -type=QScriptClass__Extension
-//QScriptClass::Extension
 type QScriptClass__Extension int64
 
 const (
@@ -362,8 +365,9 @@ func NewQScriptContextFromPointer(ptr unsafe.Pointer) (n *QScriptContext) {
 	return
 }
 
+// QScriptContext::ExecutionState
+//
 //go:generate stringer -type=QScriptContext__ExecutionState
-//QScriptContext::ExecutionState
 type QScriptContext__ExecutionState int64
 
 const (
@@ -371,8 +375,9 @@ const (
 	QScriptContext__ExceptionState QScriptContext__ExecutionState = QScriptContext__ExecutionState(1)
 )
 
+// QScriptContext::Error
+//
 //go:generate stringer -type=QScriptContext__Error
-//QScriptContext::Error
 type QScriptContext__Error int64
 
 const (
@@ -516,8 +521,9 @@ func NewQScriptContextInfoFromPointer(ptr unsafe.Pointer) (n *QScriptContextInfo
 	return
 }
 
+// QScriptContextInfo::FunctionType
+//
 //go:generate stringer -type=QScriptContextInfo__FunctionType
-//QScriptContextInfo::FunctionType
 type QScriptContextInfo__FunctionType int64
 
 const (
@@ -645,8 +651,9 @@ func NewQScriptEngineFromPointer(ptr unsafe.Pointer) (n *QScriptEngine) {
 	return
 }
 
+// QScriptEngine::ValueOwnership
+//
 //go:generate stringer -type=QScriptEngine__ValueOwnership
-//QScriptEngine::ValueOwnership
 type QScriptEngine__ValueOwnership int64
 
 const (
@@ -655,8 +662,9 @@ const (
 	QScriptEngine__AutoOwnership   QScriptEngine__ValueOwnership = QScriptEngine__ValueOwnership(2)
 )
 
+// QScriptEngine::QObjectWrapOption
+//
 //go:generate stringer -type=QScriptEngine__QObjectWrapOption
-//QScriptEngine::QObjectWrapOption
 type QScriptEngine__QObjectWrapOption int64
 
 const (
@@ -1078,8 +1086,9 @@ func NewQScriptEngineAgentFromPointer(ptr unsafe.Pointer) (n *QScriptEngineAgent
 	return
 }
 
+// QScriptEngineAgent::Extension
+//
 //go:generate stringer -type=QScriptEngineAgent__Extension
-//QScriptEngineAgent::Extension
 type QScriptEngineAgent__Extension int64
 
 const (
@@ -1836,8 +1845,9 @@ func NewQScriptSyntaxCheckResultFromPointer(ptr unsafe.Pointer) (n *QScriptSynta
 	return
 }
 
+// QScriptSyntaxCheckResult::State
+//
 //go:generate stringer -type=QScriptSyntaxCheckResult__State
-//QScriptSyntaxCheckResult::State
 type QScriptSyntaxCheckResult__State int64
 
 const (
@@ -1918,8 +1928,9 @@ func NewQScriptValueFromPointer(ptr unsafe.Pointer) (n *QScriptValue) {
 	return
 }
 
+// QScriptValue::ResolveFlag
+//
 //go:generate stringer -type=QScriptValue__ResolveFlag
-//QScriptValue::ResolveFlag
 type QScriptValue__ResolveFlag int64
 
 const (
@@ -1929,8 +1940,9 @@ const (
 	QScriptValue__ResolveFull      QScriptValue__ResolveFlag = QScriptValue__ResolveFlag(QScriptValue__ResolvePrototype | QScriptValue__ResolveScope)
 )
 
+// QScriptValue::SpecialValue
+//
 //go:generate stringer -type=QScriptValue__SpecialValue
-//QScriptValue::SpecialValue
 type QScriptValue__SpecialValue int64
 
 const (
@@ -1938,8 +1950,9 @@ const (
 	QScriptValue__UndefinedValue QScriptValue__SpecialValue = QScriptValue__SpecialValue(1)
 )
 
+// QScriptValue::PropertyFlag
+//
 //go:generate stringer -type=QScriptValue__PropertyFlag
-//QScriptValue::PropertyFlag
 type QScriptValue__PropertyFlag int64
 
 const (

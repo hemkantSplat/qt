@@ -3,9 +3,9 @@ package interop
 import (
 	"encoding/json"
 
-	"github.com/therecipe/qt/core"
+	"github.com/hemkantSplat/qt/core"
 
-	"github.com/therecipe/qt"
+	"github.com/hemkantSplat/qt"
 )
 
 //TODO: this == nil checks

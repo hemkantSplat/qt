@@ -1,11 +1,12 @@
+//go:build !minimal
 // +build !minimal
 
 package datavisualization
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/gui"
-	"github.com/therecipe/qt/internal"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/gui"
+	"github.com/hemkantSplat/qt/internal"
 	"unsafe"
 )
 
@@ -427,8 +428,9 @@ func NewQ3DCameraFromPointer(ptr unsafe.Pointer) (n *Q3DCamera) {
 	return
 }
 
+// Q3DCamera::CameraPreset
+//
 //go:generate stringer -type=Q3DCamera__CameraPreset
-//Q3DCamera::CameraPreset
 type Q3DCamera__CameraPreset int64
 
 const (
@@ -2037,8 +2039,9 @@ func NewQ3DThemeFromPointer(ptr unsafe.Pointer) (n *Q3DTheme) {
 	return
 }
 
+// Q3DTheme::ColorStyle
+//
 //go:generate stringer -type=Q3DTheme__ColorStyle
-//Q3DTheme::ColorStyle
 type Q3DTheme__ColorStyle int64
 
 var (
@@ -2047,8 +2050,9 @@ var (
 	Q3DTheme__ColorStyleRangeGradient  Q3DTheme__ColorStyle = Q3DTheme__ColorStyle(2)
 )
 
+// Q3DTheme::Theme
+//
 //go:generate stringer -type=Q3DTheme__Theme
-//Q3DTheme::Theme
 type Q3DTheme__Theme int64
 
 const (
@@ -2775,8 +2779,9 @@ func NewQAbstract3DAxisFromPointer(ptr unsafe.Pointer) (n *QAbstract3DAxis) {
 	return
 }
 
+// QAbstract3DAxis::AxisOrientation
+//
 //go:generate stringer -type=QAbstract3DAxis__AxisOrientation
-//QAbstract3DAxis::AxisOrientation
 type QAbstract3DAxis__AxisOrientation int64
 
 const (
@@ -2786,8 +2791,9 @@ const (
 	QAbstract3DAxis__AxisOrientationZ    QAbstract3DAxis__AxisOrientation = QAbstract3DAxis__AxisOrientation(4)
 )
 
+// QAbstract3DAxis::AxisType
+//
 //go:generate stringer -type=QAbstract3DAxis__AxisType
-//QAbstract3DAxis::AxisType
 type QAbstract3DAxis__AxisType int64
 
 const (
@@ -3103,8 +3109,9 @@ func NewQAbstract3DGraphFromPointer(ptr unsafe.Pointer) (n *QAbstract3DGraph) {
 	return
 }
 
+// QAbstract3DGraph::SelectionFlag
+//
 //go:generate stringer -type=QAbstract3DGraph__SelectionFlag
-//QAbstract3DGraph::SelectionFlag
 type QAbstract3DGraph__SelectionFlag int64
 
 const (
@@ -3120,8 +3127,9 @@ const (
 	QAbstract3DGraph__SelectionMultiSeries      QAbstract3DGraph__SelectionFlag = QAbstract3DGraph__SelectionFlag(16)
 )
 
+// QAbstract3DGraph::ShadowQuality
+//
 //go:generate stringer -type=QAbstract3DGraph__ShadowQuality
-//QAbstract3DGraph::ShadowQuality
 type QAbstract3DGraph__ShadowQuality int64
 
 const (
@@ -3134,8 +3142,9 @@ const (
 	QAbstract3DGraph__ShadowQualitySoftHigh   QAbstract3DGraph__ShadowQuality = QAbstract3DGraph__ShadowQuality(6)
 )
 
+// QAbstract3DGraph::ElementType
+//
 //go:generate stringer -type=QAbstract3DGraph__ElementType
-//QAbstract3DGraph::ElementType
 type QAbstract3DGraph__ElementType int64
 
 const (
@@ -3147,8 +3156,9 @@ const (
 	QAbstract3DGraph__ElementCustomItem QAbstract3DGraph__ElementType = QAbstract3DGraph__ElementType(5)
 )
 
+// QAbstract3DGraph::OptimizationHint
+//
 //go:generate stringer -type=QAbstract3DGraph__OptimizationHint
-//QAbstract3DGraph::OptimizationHint
 type QAbstract3DGraph__OptimizationHint int64
 
 const (
@@ -3198,8 +3208,9 @@ func NewQAbstract3DInputHandlerFromPointer(ptr unsafe.Pointer) (n *QAbstract3DIn
 	return
 }
 
+// QAbstract3DInputHandler::InputView
+//
 //go:generate stringer -type=QAbstract3DInputHandler__InputView
-//QAbstract3DInputHandler::InputView
 type QAbstract3DInputHandler__InputView int64
 
 const (
@@ -3490,8 +3501,9 @@ func NewQAbstract3DSeriesFromPointer(ptr unsafe.Pointer) (n *QAbstract3DSeries) 
 	return
 }
 
+// QAbstract3DSeries::SeriesType
+//
 //go:generate stringer -type=QAbstract3DSeries__SeriesType
-//QAbstract3DSeries::SeriesType
 type QAbstract3DSeries__SeriesType int64
 
 const (
@@ -3501,8 +3513,9 @@ const (
 	QAbstract3DSeries__SeriesTypeSurface QAbstract3DSeries__SeriesType = QAbstract3DSeries__SeriesType(4)
 )
 
+// QAbstract3DSeries::Mesh
+//
 //go:generate stringer -type=QAbstract3DSeries__Mesh
-//QAbstract3DSeries::Mesh
 type QAbstract3DSeries__Mesh int64
 
 const (
@@ -3987,8 +4000,9 @@ func NewQAbstractDataProxyFromPointer(ptr unsafe.Pointer) (n *QAbstractDataProxy
 	return
 }
 
+// QAbstractDataProxy::DataType
+//
 //go:generate stringer -type=QAbstractDataProxy__DataType
-//QAbstractDataProxy::DataType
 type QAbstractDataProxy__DataType int64
 
 const (
@@ -6018,8 +6032,9 @@ func NewQItemModelBarDataProxyFromPointer(ptr unsafe.Pointer) (n *QItemModelBarD
 	return
 }
 
+// QItemModelBarDataProxy::MultiMatchBehavior
+//
 //go:generate stringer -type=QItemModelBarDataProxy__MultiMatchBehavior
-//QItemModelBarDataProxy::MultiMatchBehavior
 type QItemModelBarDataProxy__MultiMatchBehavior int64
 
 const (
@@ -7027,8 +7042,9 @@ func NewQItemModelSurfaceDataProxyFromPointer(ptr unsafe.Pointer) (n *QItemModel
 	return
 }
 
+// QItemModelSurfaceDataProxy::MultiMatchBehavior
+//
 //go:generate stringer -type=QItemModelSurfaceDataProxy__MultiMatchBehavior
-//QItemModelSurfaceDataProxy::MultiMatchBehavior
 type QItemModelSurfaceDataProxy__MultiMatchBehavior int64
 
 const (
@@ -8319,8 +8335,9 @@ func NewQSurface3DSeriesFromPointer(ptr unsafe.Pointer) (n *QSurface3DSeries) {
 	return
 }
 
+// QSurface3DSeries::DrawFlag
+//
 //go:generate stringer -type=QSurface3DSeries__DrawFlag
-//QSurface3DSeries::DrawFlag
 type QSurface3DSeries__DrawFlag int64
 
 const (

@@ -1,12 +1,13 @@
+//go:build !minimal
 // +build !minimal
 
 package help
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/gui"
-	"github.com/therecipe/qt/internal"
-	"github.com/therecipe/qt/widgets"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/gui"
+	"github.com/hemkantSplat/qt/internal"
+	"github.com/hemkantSplat/qt/widgets"
 	"unsafe"
 )
 

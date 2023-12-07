@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package virtualkeyboard
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/internal"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/internal"
 	"unsafe"
 )
 
@@ -1418,8 +1419,9 @@ func NewQVirtualKeyboardInputEngineFromPointer(ptr unsafe.Pointer) (n *QVirtualK
 func (ptr *QVirtualKeyboardInputEngine) DestroyQVirtualKeyboardInputEngine() {
 }
 
+// QVirtualKeyboardInputEngine::TextCase
+//
 //go:generate stringer -type=QVirtualKeyboardInputEngine__TextCase
-//QVirtualKeyboardInputEngine::TextCase
 type QVirtualKeyboardInputEngine__TextCase int64
 
 const (
@@ -1427,8 +1429,9 @@ const (
 	QVirtualKeyboardInputEngine__Upper QVirtualKeyboardInputEngine__TextCase = QVirtualKeyboardInputEngine__TextCase(1)
 )
 
+// QVirtualKeyboardInputEngine::InputMode
+//
 //go:generate stringer -type=QVirtualKeyboardInputEngine__InputMode
-//QVirtualKeyboardInputEngine::InputMode
 type QVirtualKeyboardInputEngine__InputMode int64
 
 const (
@@ -1452,8 +1455,9 @@ const (
 	QVirtualKeyboardInputEngine__Thai                QVirtualKeyboardInputEngine__InputMode = QVirtualKeyboardInputEngine__InputMode(17)
 )
 
+// QVirtualKeyboardInputEngine::PatternRecognitionMode
+//
 //go:generate stringer -type=QVirtualKeyboardInputEngine__PatternRecognitionMode
-//QVirtualKeyboardInputEngine::PatternRecognitionMode
 type QVirtualKeyboardInputEngine__PatternRecognitionMode int64
 
 const (
@@ -1463,8 +1467,9 @@ const (
 	QVirtualKeyboardInputEngine__HandwritingRecoginition    QVirtualKeyboardInputEngine__PatternRecognitionMode = QVirtualKeyboardInputEngine__PatternRecognitionMode(QVirtualKeyboardInputEngine__Handwriting)
 )
 
+// QVirtualKeyboardInputEngine::ReselectFlag
+//
 //go:generate stringer -type=QVirtualKeyboardInputEngine__ReselectFlag
-//QVirtualKeyboardInputEngine::ReselectFlag
 type QVirtualKeyboardInputEngine__ReselectFlag int64
 
 const (
@@ -1984,16 +1989,18 @@ func NewQVirtualKeyboardSelectionListModelFromPointer(ptr unsafe.Pointer) (n *QV
 func (ptr *QVirtualKeyboardSelectionListModel) DestroyQVirtualKeyboardSelectionListModel() {
 }
 
+// QVirtualKeyboardSelectionListModel::Type
+//
 //go:generate stringer -type=QVirtualKeyboardSelectionListModel__Type
-//QVirtualKeyboardSelectionListModel::Type
 type QVirtualKeyboardSelectionListModel__Type int64
 
 const (
 	QVirtualKeyboardSelectionListModel__WordCandidateList QVirtualKeyboardSelectionListModel__Type = QVirtualKeyboardSelectionListModel__Type(0)
 )
 
+// QVirtualKeyboardSelectionListModel::Role
+//
 //go:generate stringer -type=QVirtualKeyboardSelectionListModel__Role
-//QVirtualKeyboardSelectionListModel::Role
 type QVirtualKeyboardSelectionListModel__Role int64
 
 const (
@@ -2003,8 +2010,9 @@ const (
 	QVirtualKeyboardSelectionListModel__CanRemoveSuggestion QVirtualKeyboardSelectionListModel__Role = QVirtualKeyboardSelectionListModel__Role(259)
 )
 
+// QVirtualKeyboardSelectionListModel::DictionaryType
+//
 //go:generate stringer -type=QVirtualKeyboardSelectionListModel__DictionaryType
-//QVirtualKeyboardSelectionListModel::DictionaryType
 type QVirtualKeyboardSelectionListModel__DictionaryType int64
 
 const (

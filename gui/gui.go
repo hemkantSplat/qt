@@ -1,11 +1,12 @@
+//go:build !minimal
 // +build !minimal
 
 package gui
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/internal"
-	"github.com/therecipe/qt/interop/gow"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/internal"
+	"github.com/hemkantSplat/qt/interop/gow"
 	"unsafe"
 )
 
@@ -557,8 +558,9 @@ func NewQAccessibleFromPointer(ptr unsafe.Pointer) (n *QAccessible) {
 func (ptr *QAccessible) DestroyQAccessible() {
 }
 
+// QAccessible::Event
+//
 //go:generate stringer -type=QAccessible__Event
-//QAccessible::Event
 type QAccessible__Event int64
 
 const (
@@ -633,8 +635,9 @@ const (
 	QAccessible__InvalidEvent                    QAccessible__Event = QAccessible__Event(0x80c1)
 )
 
+// QAccessible::Role
+//
 //go:generate stringer -type=QAccessible__Role
-//QAccessible::Role
 type QAccessible__Role int64
 
 const (
@@ -715,8 +718,9 @@ const (
 	QAccessible__UserRole             QAccessible__Role = QAccessible__Role(0x0000ffff)
 )
 
+// QAccessible::Text
+//
 //go:generate stringer -type=QAccessible__Text
-//QAccessible::Text
 type QAccessible__Text int64
 
 const (
@@ -729,8 +733,9 @@ const (
 	QAccessible__UserText         QAccessible__Text = QAccessible__Text(0x0000ffff)
 )
 
+// QAccessible::RelationFlag
+//
 //go:generate stringer -type=QAccessible__RelationFlag
-//QAccessible::RelationFlag
 type QAccessible__RelationFlag int64
 
 const (
@@ -741,8 +746,9 @@ const (
 	QAccessible__AllRelations QAccessible__RelationFlag = QAccessible__RelationFlag(0xffffffff)
 )
 
+// QAccessible::InterfaceType
+//
 //go:generate stringer -type=QAccessible__InterfaceType
-//QAccessible::InterfaceType
 type QAccessible__InterfaceType int64
 
 const (
@@ -755,8 +761,9 @@ const (
 	QAccessible__TableCellInterface    QAccessible__InterfaceType = QAccessible__InterfaceType(6)
 )
 
+// QAccessible::TextBoundaryType
+//
 //go:generate stringer -type=QAccessible__TextBoundaryType
-//QAccessible::TextBoundaryType
 type QAccessible__TextBoundaryType int64
 
 const (
@@ -2780,8 +2787,9 @@ func NewQAccessibleTableModelChangeEventFromPointer(ptr unsafe.Pointer) (n *QAcc
 func (ptr *QAccessibleTableModelChangeEvent) DestroyQAccessibleTableModelChangeEvent() {
 }
 
+// QAccessibleTableModelChangeEvent::ModelChangeType
+//
 //go:generate stringer -type=QAccessibleTableModelChangeEvent__ModelChangeType
-//QAccessibleTableModelChangeEvent::ModelChangeType
 type QAccessibleTableModelChangeEvent__ModelChangeType int64
 
 const (
@@ -4328,8 +4336,9 @@ func NewQClipboardFromPointer(ptr unsafe.Pointer) (n *QClipboard) {
 func (ptr *QClipboard) DestroyQClipboard() {
 }
 
+// QClipboard::Mode
+//
 //go:generate stringer -type=QClipboard__Mode
-//QClipboard::Mode
 type QClipboard__Mode int64
 
 const (
@@ -4680,8 +4689,9 @@ func NewQColorFromPointer(ptr unsafe.Pointer) (n *QColor) {
 func (ptr *QColor) DestroyQColor() {
 }
 
+// QColor::Spec
+//
 //go:generate stringer -type=QColor__Spec
-//QColor::Spec
 type QColor__Spec int64
 
 const (
@@ -4692,8 +4702,9 @@ const (
 	QColor__Hsl     QColor__Spec = QColor__Spec(4)
 )
 
+// QColor::NameFormat
+//
 //go:generate stringer -type=QColor__NameFormat
-//QColor::NameFormat
 type QColor__NameFormat int64
 
 const (
@@ -5468,8 +5479,9 @@ func NewQContextMenuEventFromPointer(ptr unsafe.Pointer) (n *QContextMenuEvent) 
 func (ptr *QContextMenuEvent) DestroyQContextMenuEvent() {
 }
 
+// QContextMenuEvent::Reason
+//
 //go:generate stringer -type=QContextMenuEvent__Reason
-//QContextMenuEvent::Reason
 type QContextMenuEvent__Reason int64
 
 const (
@@ -5822,8 +5834,9 @@ func NewQDoubleValidatorFromPointer(ptr unsafe.Pointer) (n *QDoubleValidator) {
 	return
 }
 
+// QDoubleValidator::Notation
+//
 //go:generate stringer -type=QDoubleValidator__Notation
-//QDoubleValidator::Notation
 type QDoubleValidator__Notation int64
 
 const (
@@ -6984,8 +6997,9 @@ func NewQFontFromPointer(ptr unsafe.Pointer) (n *QFont) {
 	return
 }
 
+// QFont::StyleHint
+//
 //go:generate stringer -type=QFont__StyleHint
-//QFont::StyleHint
 type QFont__StyleHint int64
 
 var (
@@ -7004,8 +7018,9 @@ var (
 	QFont__Fantasy    QFont__StyleHint = QFont__StyleHint(8)
 )
 
+// QFont::StyleStrategy
+//
 //go:generate stringer -type=QFont__StyleStrategy
-//QFont::StyleStrategy
 type QFont__StyleStrategy int64
 
 var (
@@ -7025,8 +7040,9 @@ var (
 	QFont__NoFontMerging       QFont__StyleStrategy = QFont__StyleStrategy(0x8000)
 )
 
+// QFont::HintingPreference
+//
 //go:generate stringer -type=QFont__HintingPreference
-//QFont::HintingPreference
 type QFont__HintingPreference int64
 
 const (
@@ -7036,8 +7052,9 @@ const (
 	QFont__PreferFullHinting     QFont__HintingPreference = QFont__HintingPreference(3)
 )
 
+// QFont::Weight
+//
 //go:generate stringer -type=QFont__Weight
-//QFont::Weight
 type QFont__Weight int64
 
 const (
@@ -7052,8 +7069,9 @@ const (
 	QFont__Black      QFont__Weight = QFont__Weight(87)
 )
 
+// QFont::Style
+//
 //go:generate stringer -type=QFont__Style
-//QFont::Style
 type QFont__Style int64
 
 var (
@@ -7062,8 +7080,9 @@ var (
 	QFont__StyleOblique QFont__Style = QFont__Style(2)
 )
 
+// QFont::Stretch
+//
 //go:generate stringer -type=QFont__Stretch
-//QFont::Stretch
 type QFont__Stretch int64
 
 const (
@@ -7079,8 +7098,9 @@ const (
 	QFont__UltraExpanded  QFont__Stretch = QFont__Stretch(200)
 )
 
+// QFont::Capitalization
+//
 //go:generate stringer -type=QFont__Capitalization
-//QFont::Capitalization
 type QFont__Capitalization int64
 
 const (
@@ -7091,8 +7111,9 @@ const (
 	QFont__Capitalize   QFont__Capitalization = QFont__Capitalization(4)
 )
 
+// QFont::SpacingType
+//
 //go:generate stringer -type=QFont__SpacingType
-//QFont::SpacingType
 type QFont__SpacingType int64
 
 const (
@@ -7500,8 +7521,9 @@ func NewQFontDatabaseFromPointer(ptr unsafe.Pointer) (n *QFontDatabase) {
 func (ptr *QFontDatabase) DestroyQFontDatabase() {
 }
 
+// QFontDatabase::WritingSystem
+//
 //go:generate stringer -type=QFontDatabase__WritingSystem
-//QFontDatabase::WritingSystem
 type QFontDatabase__WritingSystem int64
 
 const (
@@ -7543,8 +7565,9 @@ const (
 	QFontDatabase__WritingSystemsCount QFontDatabase__WritingSystem = QFontDatabase__WritingSystem(34)
 )
 
+// QFontDatabase::SystemFont
+//
 //go:generate stringer -type=QFontDatabase__SystemFont
-//QFontDatabase::SystemFont
 type QFontDatabase__SystemFont int64
 
 const (
@@ -8671,8 +8694,9 @@ func NewQGlyphRunFromPointer(ptr unsafe.Pointer) (n *QGlyphRun) {
 	return
 }
 
+// QGlyphRun::GlyphRunFlag
+//
 //go:generate stringer -type=QGlyphRun__GlyphRunFlag
-//QGlyphRun::GlyphRunFlag
 type QGlyphRun__GlyphRunFlag int64
 
 const (
@@ -8918,8 +8942,9 @@ func NewQGradientFromPointer(ptr unsafe.Pointer) (n *QGradient) {
 func (ptr *QGradient) DestroyQGradient() {
 }
 
+// QGradient::Type
+//
 //go:generate stringer -type=QGradient__Type
-//QGradient::Type
 type QGradient__Type int64
 
 const (
@@ -8929,8 +8954,9 @@ const (
 	QGradient__NoGradient      QGradient__Type = QGradient__Type(3)
 )
 
+// QGradient::Spread
+//
 //go:generate stringer -type=QGradient__Spread
-//QGradient::Spread
 type QGradient__Spread int64
 
 const (
@@ -8939,8 +8965,9 @@ const (
 	QGradient__RepeatSpread  QGradient__Spread = QGradient__Spread(2)
 )
 
+// QGradient::CoordinateMode
+//
 //go:generate stringer -type=QGradient__CoordinateMode
-//QGradient::CoordinateMode
 type QGradient__CoordinateMode int64
 
 const (
@@ -8950,8 +8977,9 @@ const (
 	QGradient__ObjectMode          QGradient__CoordinateMode = QGradient__CoordinateMode(3)
 )
 
+// QGradient::Preset
+//
 //go:generate stringer -type=QGradient__Preset
-//QGradient::Preset
 type QGradient__Preset int64
 
 const (
@@ -10275,8 +10303,9 @@ func NewQIconFromPointer(ptr unsafe.Pointer) (n *QIcon) {
 	return
 }
 
+// QIcon::Mode
+//
 //go:generate stringer -type=QIcon__Mode
-//QIcon::Mode
 type QIcon__Mode int64
 
 const (
@@ -10286,8 +10315,9 @@ const (
 	QIcon__Selected QIcon__Mode = QIcon__Mode(3)
 )
 
+// QIcon::State
+//
 //go:generate stringer -type=QIcon__State
-//QIcon::State
 type QIcon__State int64
 
 const (
@@ -10643,8 +10673,9 @@ func NewQIconEngineFromPointer(ptr unsafe.Pointer) (n *QIconEngine) {
 	return
 }
 
+// QIconEngine::IconEngineHook
+//
 //go:generate stringer -type=QIconEngine__IconEngineHook
-//QIconEngine::IconEngineHook
 type QIconEngine__IconEngineHook int64
 
 const (
@@ -11174,8 +11205,9 @@ func NewQImageFromPointer(ptr unsafe.Pointer) (n *QImage) {
 	return
 }
 
+// QImage::InvertMode
+//
 //go:generate stringer -type=QImage__InvertMode
-//QImage::InvertMode
 type QImage__InvertMode int64
 
 const (
@@ -11183,8 +11215,9 @@ const (
 	QImage__InvertRgba QImage__InvertMode = QImage__InvertMode(1)
 )
 
+// QImage::Format
+//
 //go:generate stringer -type=QImage__Format
-//QImage::Format
 type QImage__Format int64
 
 const (
@@ -11836,8 +11869,9 @@ func NewQImageIOHandlerFromPointer(ptr unsafe.Pointer) (n *QImageIOHandler) {
 	return
 }
 
+// QImageIOHandler::ImageOption
+//
 //go:generate stringer -type=QImageIOHandler__ImageOption
-//QImageIOHandler::ImageOption
 type QImageIOHandler__ImageOption int64
 
 const (
@@ -11863,8 +11897,9 @@ const (
 	QImageIOHandler__TransformedByDefault QImageIOHandler__ImageOption = QImageIOHandler__ImageOption(19)
 )
 
+// QImageIOHandler::Transformation
+//
 //go:generate stringer -type=QImageIOHandler__Transformation
-//QImageIOHandler::Transformation
 type QImageIOHandler__Transformation int64
 
 const (
@@ -12226,8 +12261,9 @@ func NewQImageIOPluginFromPointer(ptr unsafe.Pointer) (n *QImageIOPlugin) {
 	return
 }
 
+// QImageIOPlugin::Capability
+//
 //go:generate stringer -type=QImageIOPlugin__Capability
-//QImageIOPlugin::Capability
 type QImageIOPlugin__Capability int64
 
 const (
@@ -12438,8 +12474,9 @@ func NewQImageReaderFromPointer(ptr unsafe.Pointer) (n *QImageReader) {
 	return
 }
 
+// QImageReader::ImageReaderError
+//
 //go:generate stringer -type=QImageReader__ImageReaderError
-//QImageReader::ImageReaderError
 type QImageReader__ImageReaderError int64
 
 const (
@@ -12892,8 +12929,9 @@ func NewQImageWriterFromPointer(ptr unsafe.Pointer) (n *QImageWriter) {
 	return
 }
 
+// QImageWriter::ImageWriterError
+//
 //go:generate stringer -type=QImageWriter__ImageWriterError
-//QImageWriter::ImageWriterError
 type QImageWriter__ImageWriterError int64
 
 const (
@@ -13260,8 +13298,9 @@ func NewQInputMethodFromPointer(ptr unsafe.Pointer) (n *QInputMethod) {
 func (ptr *QInputMethod) DestroyQInputMethod() {
 }
 
+// QInputMethod::Action
+//
 //go:generate stringer -type=QInputMethod__Action
-//QInputMethod::Action
 type QInputMethod__Action int64
 
 const (
@@ -13740,8 +13779,9 @@ func NewQInputMethodEventFromPointer(ptr unsafe.Pointer) (n *QInputMethodEvent) 
 func (ptr *QInputMethodEvent) DestroyQInputMethodEvent() {
 }
 
+// QInputMethodEvent::AttributeType
+//
 //go:generate stringer -type=QInputMethodEvent__AttributeType
-//QInputMethodEvent::AttributeType
 type QInputMethodEvent__AttributeType int64
 
 const (
@@ -14188,8 +14228,9 @@ func NewQKeySequenceFromPointer(ptr unsafe.Pointer) (n *QKeySequence) {
 	return
 }
 
+// QKeySequence::StandardKey
+//
 //go:generate stringer -type=QKeySequence__StandardKey
-//QKeySequence::StandardKey
 type QKeySequence__StandardKey int64
 
 const (
@@ -14266,8 +14307,9 @@ const (
 	QKeySequence__Cancel                   QKeySequence__StandardKey = QKeySequence__StandardKey(70)
 )
 
+// QKeySequence::SequenceFormat
+//
 //go:generate stringer -type=QKeySequence__SequenceFormat
-//QKeySequence::SequenceFormat
 type QKeySequence__SequenceFormat int64
 
 const (
@@ -14275,8 +14317,9 @@ const (
 	QKeySequence__PortableText QKeySequence__SequenceFormat = QKeySequence__SequenceFormat(1)
 )
 
+// QKeySequence::SequenceMatch
+//
 //go:generate stringer -type=QKeySequence__SequenceMatch
-//QKeySequence::SequenceMatch
 type QKeySequence__SequenceMatch int64
 
 const (
@@ -15316,8 +15359,9 @@ func NewQMovieFromPointer(ptr unsafe.Pointer) (n *QMovie) {
 	return
 }
 
+// QMovie::MovieState
+//
 //go:generate stringer -type=QMovie__MovieState
-//QMovie::MovieState
 type QMovie__MovieState int64
 
 const (
@@ -15326,8 +15370,9 @@ const (
 	QMovie__Running    QMovie__MovieState = QMovie__MovieState(2)
 )
 
+// QMovie::CacheMode
+//
 //go:generate stringer -type=QMovie__CacheMode
-//QMovie::CacheMode
 type QMovie__CacheMode int64
 
 const (
@@ -16319,8 +16364,9 @@ func NewQOpenGLBufferFromPointer(ptr unsafe.Pointer) (n *QOpenGLBuffer) {
 	return
 }
 
+// QOpenGLBuffer::Type
+//
 //go:generate stringer -type=QOpenGLBuffer__Type
-//QOpenGLBuffer::Type
 type QOpenGLBuffer__Type int64
 
 const (
@@ -16330,8 +16376,9 @@ const (
 	QOpenGLBuffer__PixelUnpackBuffer QOpenGLBuffer__Type = QOpenGLBuffer__Type(0x88EC)
 )
 
+// QOpenGLBuffer::UsagePattern
+//
 //go:generate stringer -type=QOpenGLBuffer__UsagePattern
-//QOpenGLBuffer::UsagePattern
 type QOpenGLBuffer__UsagePattern int64
 
 const (
@@ -16346,8 +16393,9 @@ const (
 	QOpenGLBuffer__DynamicCopy QOpenGLBuffer__UsagePattern = QOpenGLBuffer__UsagePattern(0x88EA)
 )
 
+// QOpenGLBuffer::Access
+//
 //go:generate stringer -type=QOpenGLBuffer__Access
-//QOpenGLBuffer::Access
 type QOpenGLBuffer__Access int64
 
 const (
@@ -16356,8 +16404,9 @@ const (
 	QOpenGLBuffer__ReadWrite QOpenGLBuffer__Access = QOpenGLBuffer__Access(0x88BA)
 )
 
+// QOpenGLBuffer::RangeAccessFlag
+//
 //go:generate stringer -type=QOpenGLBuffer__RangeAccessFlag
-//QOpenGLBuffer::RangeAccessFlag
 type QOpenGLBuffer__RangeAccessFlag int64
 
 const (
@@ -16532,8 +16581,9 @@ func NewQOpenGLContextFromPointer(ptr unsafe.Pointer) (n *QOpenGLContext) {
 	return
 }
 
+// QOpenGLContext::OpenGLModuleType
+//
 //go:generate stringer -type=QOpenGLContext__OpenGLModuleType
-//QOpenGLContext::OpenGLModuleType
 type QOpenGLContext__OpenGLModuleType int64
 
 const (
@@ -17095,8 +17145,9 @@ func NewQOpenGLDebugLoggerFromPointer(ptr unsafe.Pointer) (n *QOpenGLDebugLogger
 	return
 }
 
+// QOpenGLDebugLogger::LoggingMode
+//
 //go:generate stringer -type=QOpenGLDebugLogger__LoggingMode
-//QOpenGLDebugLogger::LoggingMode
 type QOpenGLDebugLogger__LoggingMode int64
 
 const (
@@ -17451,8 +17502,9 @@ func NewQOpenGLDebugMessageFromPointer(ptr unsafe.Pointer) (n *QOpenGLDebugMessa
 	return
 }
 
+// QOpenGLDebugMessage::Source
+//
 //go:generate stringer -type=QOpenGLDebugMessage__Source
-//QOpenGLDebugMessage::Source
 type QOpenGLDebugMessage__Source int64
 
 const (
@@ -17467,8 +17519,9 @@ const (
 	QOpenGLDebugMessage__AnySource            QOpenGLDebugMessage__Source = QOpenGLDebugMessage__Source(0xffffffff)
 )
 
+// QOpenGLDebugMessage::Type
+//
 //go:generate stringer -type=QOpenGLDebugMessage__Type
-//QOpenGLDebugMessage::Type
 type QOpenGLDebugMessage__Type int64
 
 const (
@@ -17486,8 +17539,9 @@ const (
 	QOpenGLDebugMessage__AnyType                QOpenGLDebugMessage__Type = QOpenGLDebugMessage__Type(0xffffffff)
 )
 
+// QOpenGLDebugMessage::Severity
+//
 //go:generate stringer -type=QOpenGLDebugMessage__Severity
-//QOpenGLDebugMessage::Severity
 type QOpenGLDebugMessage__Severity int64
 
 const (
@@ -18573,8 +18627,9 @@ func NewQOpenGLFramebufferObjectFromPointer(ptr unsafe.Pointer) (n *QOpenGLFrame
 	return
 }
 
+// QOpenGLFramebufferObject::Attachment
+//
 //go:generate stringer -type=QOpenGLFramebufferObject__Attachment
-//QOpenGLFramebufferObject::Attachment
 type QOpenGLFramebufferObject__Attachment int64
 
 const (
@@ -18583,8 +18638,9 @@ const (
 	QOpenGLFramebufferObject__Depth                QOpenGLFramebufferObject__Attachment = QOpenGLFramebufferObject__Attachment(2)
 )
 
+// QOpenGLFramebufferObject::FramebufferRestorePolicy
+//
 //go:generate stringer -type=QOpenGLFramebufferObject__FramebufferRestorePolicy
-//QOpenGLFramebufferObject::FramebufferRestorePolicy
 type QOpenGLFramebufferObject__FramebufferRestorePolicy int64
 
 const (
@@ -18996,8 +19052,9 @@ func NewQOpenGLFunctionsFromPointer(ptr unsafe.Pointer) (n *QOpenGLFunctions) {
 	return
 }
 
+// QOpenGLFunctions::OpenGLFeature
+//
 //go:generate stringer -type=QOpenGLFunctions__OpenGLFeature
-//QOpenGLFunctions::OpenGLFeature
 type QOpenGLFunctions__OpenGLFeature int64
 
 const (
@@ -22851,8 +22908,9 @@ func NewQOpenGLShaderFromPointer(ptr unsafe.Pointer) (n *QOpenGLShader) {
 	return
 }
 
+// QOpenGLShader::ShaderTypeBit
+//
 //go:generate stringer -type=QOpenGLShader__ShaderTypeBit
-//QOpenGLShader::ShaderTypeBit
 type QOpenGLShader__ShaderTypeBit int64
 
 const (
@@ -23946,8 +24004,9 @@ func NewQOpenGLTextureFromPointer(ptr unsafe.Pointer) (n *QOpenGLTexture) {
 func (ptr *QOpenGLTexture) DestroyQOpenGLTexture() {
 }
 
+// QOpenGLTexture::Target
+//
 //go:generate stringer -type=QOpenGLTexture__Target
-//QOpenGLTexture::Target
 type QOpenGLTexture__Target int64
 
 const (
@@ -23964,8 +24023,9 @@ const (
 	QOpenGLTexture__TargetBuffer             QOpenGLTexture__Target = QOpenGLTexture__Target(0x8C2A)
 )
 
+// QOpenGLTexture::BindingTarget
+//
 //go:generate stringer -type=QOpenGLTexture__BindingTarget
-//QOpenGLTexture::BindingTarget
 type QOpenGLTexture__BindingTarget int64
 
 const (
@@ -23982,8 +24042,9 @@ const (
 	QOpenGLTexture__BindingTargetBuffer             QOpenGLTexture__BindingTarget = QOpenGLTexture__BindingTarget(0x8C2C)
 )
 
+// QOpenGLTexture::MipMapGeneration
+//
 //go:generate stringer -type=QOpenGLTexture__MipMapGeneration
-//QOpenGLTexture::MipMapGeneration
 type QOpenGLTexture__MipMapGeneration int64
 
 const (
@@ -23991,8 +24052,9 @@ const (
 	QOpenGLTexture__DontGenerateMipMaps QOpenGLTexture__MipMapGeneration = QOpenGLTexture__MipMapGeneration(1)
 )
 
+// QOpenGLTexture::TextureUnitReset
+//
 //go:generate stringer -type=QOpenGLTexture__TextureUnitReset
-//QOpenGLTexture::TextureUnitReset
 type QOpenGLTexture__TextureUnitReset int64
 
 const (
@@ -24000,8 +24062,9 @@ const (
 	QOpenGLTexture__DontResetTextureUnit QOpenGLTexture__TextureUnitReset = QOpenGLTexture__TextureUnitReset(1)
 )
 
+// QOpenGLTexture::TextureFormat
+//
 //go:generate stringer -type=QOpenGLTexture__TextureFormat
-//QOpenGLTexture::TextureFormat
 type QOpenGLTexture__TextureFormat int64
 
 const (
@@ -24133,8 +24196,9 @@ const (
 	QOpenGLTexture__LuminanceAlphaFormat           QOpenGLTexture__TextureFormat = QOpenGLTexture__TextureFormat(0x190A)
 )
 
+// QOpenGLTexture::CubeMapFace
+//
 //go:generate stringer -type=QOpenGLTexture__CubeMapFace
-//QOpenGLTexture::CubeMapFace
 type QOpenGLTexture__CubeMapFace int64
 
 const (
@@ -24146,8 +24210,9 @@ const (
 	QOpenGLTexture__CubeMapNegativeZ QOpenGLTexture__CubeMapFace = QOpenGLTexture__CubeMapFace(0x851A)
 )
 
+// QOpenGLTexture::PixelFormat
+//
 //go:generate stringer -type=QOpenGLTexture__PixelFormat
-//QOpenGLTexture::PixelFormat
 type QOpenGLTexture__PixelFormat int64
 
 const (
@@ -24172,8 +24237,9 @@ const (
 	QOpenGLTexture__LuminanceAlpha QOpenGLTexture__PixelFormat = QOpenGLTexture__PixelFormat(0x190A)
 )
 
+// QOpenGLTexture::PixelType
+//
 //go:generate stringer -type=QOpenGLTexture__PixelType
-//QOpenGLTexture::PixelType
 type QOpenGLTexture__PixelType int64
 
 const (
@@ -24205,8 +24271,9 @@ const (
 	QOpenGLTexture__Float32_D32_UInt32_S8_X24 QOpenGLTexture__PixelType = QOpenGLTexture__PixelType(0x8DAD)
 )
 
+// QOpenGLTexture::SwizzleComponent
+//
 //go:generate stringer -type=QOpenGLTexture__SwizzleComponent
-//QOpenGLTexture::SwizzleComponent
 type QOpenGLTexture__SwizzleComponent int64
 
 const (
@@ -24216,8 +24283,9 @@ const (
 	QOpenGLTexture__SwizzleAlpha QOpenGLTexture__SwizzleComponent = QOpenGLTexture__SwizzleComponent(0x8E45)
 )
 
+// QOpenGLTexture::SwizzleValue
+//
 //go:generate stringer -type=QOpenGLTexture__SwizzleValue
-//QOpenGLTexture::SwizzleValue
 type QOpenGLTexture__SwizzleValue int64
 
 const (
@@ -24229,8 +24297,9 @@ const (
 	QOpenGLTexture__OneValue   QOpenGLTexture__SwizzleValue = QOpenGLTexture__SwizzleValue(1)
 )
 
+// QOpenGLTexture::WrapMode
+//
 //go:generate stringer -type=QOpenGLTexture__WrapMode
-//QOpenGLTexture::WrapMode
 type QOpenGLTexture__WrapMode int64
 
 const (
@@ -24240,8 +24309,9 @@ const (
 	QOpenGLTexture__ClampToBorder  QOpenGLTexture__WrapMode = QOpenGLTexture__WrapMode(0x812D)
 )
 
+// QOpenGLTexture::CoordinateDirection
+//
 //go:generate stringer -type=QOpenGLTexture__CoordinateDirection
-//QOpenGLTexture::CoordinateDirection
 type QOpenGLTexture__CoordinateDirection int64
 
 const (
@@ -24250,8 +24320,9 @@ const (
 	QOpenGLTexture__DirectionR QOpenGLTexture__CoordinateDirection = QOpenGLTexture__CoordinateDirection(0x8072)
 )
 
+// QOpenGLTexture::Feature
+//
 //go:generate stringer -type=QOpenGLTexture__Feature
-//QOpenGLTexture::Feature
 type QOpenGLTexture__Feature int64
 
 const (
@@ -24273,8 +24344,9 @@ const (
 	QOpenGLTexture__TextureMipMapLevel          QOpenGLTexture__Feature = QOpenGLTexture__Feature(0x00008000)
 )
 
+// QOpenGLTexture::DepthStencilMode
+//
 //go:generate stringer -type=QOpenGLTexture__DepthStencilMode
-//QOpenGLTexture::DepthStencilMode
 type QOpenGLTexture__DepthStencilMode int64
 
 const (
@@ -24282,8 +24354,9 @@ const (
 	QOpenGLTexture__StencilMode QOpenGLTexture__DepthStencilMode = QOpenGLTexture__DepthStencilMode(0x1901)
 )
 
+// QOpenGLTexture::ComparisonFunction
+//
 //go:generate stringer -type=QOpenGLTexture__ComparisonFunction
-//QOpenGLTexture::ComparisonFunction
 type QOpenGLTexture__ComparisonFunction int64
 
 const (
@@ -24297,8 +24370,9 @@ const (
 	QOpenGLTexture__CompareNever        QOpenGLTexture__ComparisonFunction = QOpenGLTexture__ComparisonFunction(0x0200)
 )
 
+// QOpenGLTexture::ComparisonMode
+//
 //go:generate stringer -type=QOpenGLTexture__ComparisonMode
-//QOpenGLTexture::ComparisonMode
 type QOpenGLTexture__ComparisonMode int64
 
 const (
@@ -24306,8 +24380,9 @@ const (
 	QOpenGLTexture__CompareNone         QOpenGLTexture__ComparisonMode = QOpenGLTexture__ComparisonMode(0x0000)
 )
 
+// QOpenGLTexture::Filter
+//
 //go:generate stringer -type=QOpenGLTexture__Filter
-//QOpenGLTexture::Filter
 type QOpenGLTexture__Filter int64
 
 const (
@@ -24831,8 +24906,9 @@ func NewQOpenGLTextureBlitterFromPointer(ptr unsafe.Pointer) (n *QOpenGLTextureB
 	return
 }
 
+// QOpenGLTextureBlitter::Origin
+//
 //go:generate stringer -type=QOpenGLTextureBlitter__Origin
-//QOpenGLTextureBlitter::Origin
 type QOpenGLTextureBlitter__Origin int64
 
 const (
@@ -25850,8 +25926,9 @@ func NewQOpenGLWindowFromPointer(ptr unsafe.Pointer) (n *QOpenGLWindow) {
 	return
 }
 
+// QOpenGLWindow::UpdateBehavior
+//
 //go:generate stringer -type=QOpenGLWindow__UpdateBehavior
-//QOpenGLWindow::UpdateBehavior
 type QOpenGLWindow__UpdateBehavior int64
 
 const (
@@ -26087,8 +26164,9 @@ func NewQPageLayoutFromPointer(ptr unsafe.Pointer) (n *QPageLayout) {
 	return
 }
 
+// QPageLayout::Unit
+//
 //go:generate stringer -type=QPageLayout__Unit
-//QPageLayout::Unit
 type QPageLayout__Unit int64
 
 const (
@@ -26100,8 +26178,9 @@ const (
 	QPageLayout__Cicero     QPageLayout__Unit = QPageLayout__Unit(5)
 )
 
+// QPageLayout::Orientation
+//
 //go:generate stringer -type=QPageLayout__Orientation
-//QPageLayout::Orientation
 type QPageLayout__Orientation int64
 
 const (
@@ -26109,8 +26188,9 @@ const (
 	QPageLayout__Landscape QPageLayout__Orientation = QPageLayout__Orientation(1)
 )
 
+// QPageLayout::Mode
+//
 //go:generate stringer -type=QPageLayout__Mode
-//QPageLayout::Mode
 type QPageLayout__Mode int64
 
 const (
@@ -26335,8 +26415,9 @@ func NewQPageSizeFromPointer(ptr unsafe.Pointer) (n *QPageSize) {
 	return
 }
 
+// QPageSize::PageSizeId
+//
 //go:generate stringer -type=QPageSize__PageSizeId
-//QPageSize::PageSizeId
 type QPageSize__PageSizeId int64
 
 const (
@@ -26469,8 +26550,9 @@ const (
 	QPageSize__Envelope10         QPageSize__PageSizeId = QPageSize__PageSizeId(QPageSize__Comm10E)
 )
 
+// QPageSize::Unit
+//
 //go:generate stringer -type=QPageSize__Unit
-//QPageSize::Unit
 type QPageSize__Unit int64
 
 const (
@@ -26482,8 +26564,9 @@ const (
 	QPageSize__Cicero     QPageSize__Unit = QPageSize__Unit(5)
 )
 
+// QPageSize::SizeMatchPolicy
+//
 //go:generate stringer -type=QPageSize__SizeMatchPolicy
-//QPageSize::SizeMatchPolicy
 type QPageSize__SizeMatchPolicy int64
 
 const (
@@ -26755,8 +26838,9 @@ func NewQPagedPaintDeviceFromPointer(ptr unsafe.Pointer) (n *QPagedPaintDevice) 
 	return
 }
 
+// QPagedPaintDevice::PageSize
+//
 //go:generate stringer -type=QPagedPaintDevice__PageSize
-//QPagedPaintDevice::PageSize
 type QPagedPaintDevice__PageSize int64
 
 const (
@@ -26889,8 +26973,9 @@ const (
 	QPagedPaintDevice__Envelope10         QPagedPaintDevice__PageSize = QPagedPaintDevice__PageSize(QPagedPaintDevice__Comm10E)
 )
 
+// QPagedPaintDevice::PdfVersion
+//
 //go:generate stringer -type=QPagedPaintDevice__PdfVersion
-//QPagedPaintDevice::PdfVersion
 type QPagedPaintDevice__PdfVersion int64
 
 const (
@@ -27066,8 +27151,9 @@ func NewQPaintDeviceFromPointer(ptr unsafe.Pointer) (n *QPaintDevice) {
 	return
 }
 
+// QPaintDevice::PaintDeviceMetric
+//
 //go:generate stringer -type=QPaintDevice__PaintDeviceMetric
-//QPaintDevice::PaintDeviceMetric
 type QPaintDevice__PaintDeviceMetric int64
 
 const (
@@ -27367,8 +27453,9 @@ func NewQPaintEngineFromPointer(ptr unsafe.Pointer) (n *QPaintEngine) {
 	return
 }
 
+// QPaintEngine::PaintEngineFeature
+//
 //go:generate stringer -type=QPaintEngine__PaintEngineFeature
-//QPaintEngine::PaintEngineFeature
 type QPaintEngine__PaintEngineFeature int64
 
 const (
@@ -27394,8 +27481,9 @@ const (
 	QPaintEngine__AllFeatures                 QPaintEngine__PaintEngineFeature = QPaintEngine__PaintEngineFeature(0xffffffff)
 )
 
+// QPaintEngine::DirtyFlag
+//
 //go:generate stringer -type=QPaintEngine__DirtyFlag
-//QPaintEngine::DirtyFlag
 type QPaintEngine__DirtyFlag int64
 
 const (
@@ -27415,8 +27503,9 @@ const (
 	QPaintEngine__AllDirty             QPaintEngine__DirtyFlag = QPaintEngine__DirtyFlag(0xffff)
 )
 
+// QPaintEngine::PolygonDrawMode
+//
 //go:generate stringer -type=QPaintEngine__PolygonDrawMode
-//QPaintEngine::PolygonDrawMode
 type QPaintEngine__PolygonDrawMode int64
 
 const (
@@ -27426,8 +27515,9 @@ const (
 	QPaintEngine__PolylineMode QPaintEngine__PolygonDrawMode = QPaintEngine__PolygonDrawMode(3)
 )
 
+// QPaintEngine::Type
+//
 //go:generate stringer -type=QPaintEngine__Type
-//QPaintEngine::Type
 type QPaintEngine__Type int64
 
 const (
@@ -28106,8 +28196,9 @@ func NewQPainterFromPointer(ptr unsafe.Pointer) (n *QPainter) {
 	return
 }
 
+// QPainter::RenderHint
+//
 //go:generate stringer -type=QPainter__RenderHint
-//QPainter::RenderHint
 type QPainter__RenderHint int64
 
 const (
@@ -28120,16 +28211,18 @@ const (
 	QPainter__LosslessImageRendering  QPainter__RenderHint = QPainter__RenderHint(0x40)
 )
 
+// QPainter::PixmapFragmentHint
+//
 //go:generate stringer -type=QPainter__PixmapFragmentHint
-//QPainter::PixmapFragmentHint
 type QPainter__PixmapFragmentHint int64
 
 const (
 	QPainter__OpaqueHint QPainter__PixmapFragmentHint = QPainter__PixmapFragmentHint(0x01)
 )
 
+// QPainter::CompositionMode
+//
 //go:generate stringer -type=QPainter__CompositionMode
-//QPainter::CompositionMode
 type QPainter__CompositionMode int64
 
 const (
@@ -29260,8 +29353,9 @@ func NewQPainterPathFromPointer(ptr unsafe.Pointer) (n *QPainterPath) {
 	return
 }
 
+// QPainterPath::ElementType
+//
 //go:generate stringer -type=QPainterPath__ElementType
-//QPainterPath::ElementType
 type QPainterPath__ElementType int64
 
 const (
@@ -29874,8 +29968,9 @@ func NewQPaletteFromPointer(ptr unsafe.Pointer) (n *QPalette) {
 	return
 }
 
+// QPalette::ColorGroup
+//
 //go:generate stringer -type=QPalette__ColorGroup
-//QPalette::ColorGroup
 type QPalette__ColorGroup int64
 
 const (
@@ -29888,8 +29983,9 @@ const (
 	QPalette__Normal       QPalette__ColorGroup = QPalette__ColorGroup(QPalette__Active)
 )
 
+// QPalette::ColorRole
+//
 //go:generate stringer -type=QPalette__ColorRole
-//QPalette::ColorRole
 type QPalette__ColorRole int64
 
 var (
@@ -31381,8 +31477,9 @@ func NewQPixelFormatFromPointer(ptr unsafe.Pointer) (n *QPixelFormat) {
 func (ptr *QPixelFormat) DestroyQPixelFormat() {
 }
 
+// QPixelFormat::ColorModel
+//
 //go:generate stringer -type=QPixelFormat__ColorModel
-//QPixelFormat::ColorModel
 type QPixelFormat__ColorModel int64
 
 const (
@@ -31397,8 +31494,9 @@ const (
 	QPixelFormat__Alpha     QPixelFormat__ColorModel = QPixelFormat__ColorModel(8)
 )
 
+// QPixelFormat::AlphaUsage
+//
 //go:generate stringer -type=QPixelFormat__AlphaUsage
-//QPixelFormat::AlphaUsage
 type QPixelFormat__AlphaUsage int64
 
 const (
@@ -31406,8 +31504,9 @@ const (
 	QPixelFormat__IgnoresAlpha QPixelFormat__AlphaUsage = QPixelFormat__AlphaUsage(1)
 )
 
+// QPixelFormat::AlphaPosition
+//
 //go:generate stringer -type=QPixelFormat__AlphaPosition
-//QPixelFormat::AlphaPosition
 type QPixelFormat__AlphaPosition int64
 
 const (
@@ -31415,8 +31514,9 @@ const (
 	QPixelFormat__AtEnd       QPixelFormat__AlphaPosition = QPixelFormat__AlphaPosition(1)
 )
 
+// QPixelFormat::AlphaPremultiplied
+//
 //go:generate stringer -type=QPixelFormat__AlphaPremultiplied
-//QPixelFormat::AlphaPremultiplied
 type QPixelFormat__AlphaPremultiplied int64
 
 const (
@@ -31424,8 +31524,9 @@ const (
 	QPixelFormat__Premultiplied    QPixelFormat__AlphaPremultiplied = QPixelFormat__AlphaPremultiplied(1)
 )
 
+// QPixelFormat::TypeInterpretation
+//
 //go:generate stringer -type=QPixelFormat__TypeInterpretation
-//QPixelFormat::TypeInterpretation
 type QPixelFormat__TypeInterpretation int64
 
 const (
@@ -31435,8 +31536,9 @@ const (
 	QPixelFormat__FloatingPoint   QPixelFormat__TypeInterpretation = QPixelFormat__TypeInterpretation(3)
 )
 
+// QPixelFormat::YUVLayout
+//
 //go:generate stringer -type=QPixelFormat__YUVLayout
-//QPixelFormat::YUVLayout
 type QPixelFormat__YUVLayout int64
 
 const (
@@ -31458,8 +31560,9 @@ const (
 	QPixelFormat__Y16      QPixelFormat__YUVLayout = QPixelFormat__YUVLayout(15)
 )
 
+// QPixelFormat::ByteOrder
+//
 //go:generate stringer -type=QPixelFormat__ByteOrder
-//QPixelFormat::ByteOrder
 type QPixelFormat__ByteOrder int64
 
 const (
@@ -32456,8 +32559,9 @@ func NewQPlatformSurfaceEventFromPointer(ptr unsafe.Pointer) (n *QPlatformSurfac
 func (ptr *QPlatformSurfaceEvent) DestroyQPlatformSurfaceEvent() {
 }
 
+// QPlatformSurfaceEvent::SurfaceEventType
+//
 //go:generate stringer -type=QPlatformSurfaceEvent__SurfaceEventType
-//QPlatformSurfaceEvent::SurfaceEventType
 type QPlatformSurfaceEvent__SurfaceEventType int64
 
 const (
@@ -33847,8 +33951,9 @@ func NewQRawFontFromPointer(ptr unsafe.Pointer) (n *QRawFont) {
 	return
 }
 
+// QRawFont::AntialiasingType
+//
 //go:generate stringer -type=QRawFont__AntialiasingType
-//QRawFont::AntialiasingType
 type QRawFont__AntialiasingType int64
 
 const (
@@ -33856,8 +33961,9 @@ const (
 	QRawFont__SubPixelAntialiasing QRawFont__AntialiasingType = QRawFont__AntialiasingType(1)
 )
 
+// QRawFont::LayoutFlag
+//
 //go:generate stringer -type=QRawFont__LayoutFlag
-//QRawFont::LayoutFlag
 type QRawFont__LayoutFlag int64
 
 const (
@@ -34328,8 +34434,9 @@ func NewQRegionFromPointer(ptr unsafe.Pointer) (n *QRegion) {
 func (ptr *QRegion) DestroyQRegion() {
 }
 
+// QRegion::RegionType
+//
 //go:generate stringer -type=QRegion__RegionType
-//QRegion::RegionType
 type QRegion__RegionType int64
 
 const (
@@ -35437,8 +35544,9 @@ func NewQScrollEventFromPointer(ptr unsafe.Pointer) (n *QScrollEvent) {
 	return
 }
 
+// QScrollEvent::ScrollState
+//
 //go:generate stringer -type=QScrollEvent__ScrollState
-//QScrollEvent::ScrollState
 type QScrollEvent__ScrollState int64
 
 const (
@@ -35645,8 +35753,9 @@ func NewQSessionManagerFromPointer(ptr unsafe.Pointer) (n *QSessionManager) {
 func (ptr *QSessionManager) DestroyQSessionManager() {
 }
 
+// QSessionManager::RestartHint
+//
 //go:generate stringer -type=QSessionManager__RestartHint
-//QSessionManager::RestartHint
 type QSessionManager__RestartHint int64
 
 const (
@@ -36026,8 +36135,9 @@ func NewQStandardItemFromPointer(ptr unsafe.Pointer) (n *QStandardItem) {
 	return
 }
 
+// QStandardItem::ItemType
+//
 //go:generate stringer -type=QStandardItem__ItemType
-//QStandardItem::ItemType
 type QStandardItem__ItemType int64
 
 const (
@@ -37754,8 +37864,9 @@ func NewQStaticTextFromPointer(ptr unsafe.Pointer) (n *QStaticText) {
 	return
 }
 
+// QStaticText::PerformanceHint
+//
 //go:generate stringer -type=QStaticText__PerformanceHint
-//QStaticText::PerformanceHint
 type QStaticText__PerformanceHint int64
 
 const (
@@ -38429,8 +38540,9 @@ func NewQSurfaceFromPointer(ptr unsafe.Pointer) (n *QSurface) {
 	return
 }
 
+// QSurface::SurfaceClass
+//
 //go:generate stringer -type=QSurface__SurfaceClass
-//QSurface::SurfaceClass
 type QSurface__SurfaceClass int64
 
 const (
@@ -38438,8 +38550,9 @@ const (
 	QSurface__Offscreen QSurface__SurfaceClass = QSurface__SurfaceClass(1)
 )
 
+// QSurface::SurfaceType
+//
 //go:generate stringer -type=QSurface__SurfaceType
-//QSurface::SurfaceType
 type QSurface__SurfaceType int64
 
 const (
@@ -38568,8 +38681,9 @@ func NewQSurfaceFormatFromPointer(ptr unsafe.Pointer) (n *QSurfaceFormat) {
 	return
 }
 
+// QSurfaceFormat::FormatOption
+//
 //go:generate stringer -type=QSurfaceFormat__FormatOption
-//QSurfaceFormat::FormatOption
 type QSurfaceFormat__FormatOption int64
 
 const (
@@ -38579,8 +38693,9 @@ const (
 	QSurfaceFormat__ResetNotification   QSurfaceFormat__FormatOption = QSurfaceFormat__FormatOption(0x0008)
 )
 
+// QSurfaceFormat::SwapBehavior
+//
 //go:generate stringer -type=QSurfaceFormat__SwapBehavior
-//QSurfaceFormat::SwapBehavior
 type QSurfaceFormat__SwapBehavior int64
 
 const (
@@ -38590,8 +38705,9 @@ const (
 	QSurfaceFormat__TripleBuffer        QSurfaceFormat__SwapBehavior = QSurfaceFormat__SwapBehavior(3)
 )
 
+// QSurfaceFormat::RenderableType
+//
 //go:generate stringer -type=QSurfaceFormat__RenderableType
-//QSurfaceFormat::RenderableType
 type QSurfaceFormat__RenderableType int64
 
 const (
@@ -38601,8 +38717,9 @@ const (
 	QSurfaceFormat__OpenVG                QSurfaceFormat__RenderableType = QSurfaceFormat__RenderableType(0x4)
 )
 
+// QSurfaceFormat::OpenGLContextProfile
+//
 //go:generate stringer -type=QSurfaceFormat__OpenGLContextProfile
-//QSurfaceFormat::OpenGLContextProfile
 type QSurfaceFormat__OpenGLContextProfile int64
 
 const (
@@ -38611,8 +38728,9 @@ const (
 	QSurfaceFormat__CompatibilityProfile QSurfaceFormat__OpenGLContextProfile = QSurfaceFormat__OpenGLContextProfile(2)
 )
 
+// QSurfaceFormat::ColorSpace
+//
 //go:generate stringer -type=QSurfaceFormat__ColorSpace
-//QSurfaceFormat::ColorSpace
 type QSurfaceFormat__ColorSpace int64
 
 const (
@@ -39188,8 +39306,9 @@ func NewQTabletEventFromPointer(ptr unsafe.Pointer) (n *QTabletEvent) {
 func (ptr *QTabletEvent) DestroyQTabletEvent() {
 }
 
+// QTabletEvent::TabletDevice
+//
 //go:generate stringer -type=QTabletEvent__TabletDevice
-//QTabletEvent::TabletDevice
 type QTabletEvent__TabletDevice int64
 
 const (
@@ -39202,8 +39321,9 @@ const (
 	QTabletEvent__RotationStylus QTabletEvent__TabletDevice = QTabletEvent__TabletDevice(6)
 )
 
+// QTabletEvent::PointerType
+//
 //go:generate stringer -type=QTabletEvent__PointerType
-//QTabletEvent::PointerType
 type QTabletEvent__PointerType int64
 
 const (
@@ -39564,8 +39684,9 @@ func NewQTextBlockFormatFromPointer(ptr unsafe.Pointer) (n *QTextBlockFormat) {
 func (ptr *QTextBlockFormat) DestroyQTextBlockFormat() {
 }
 
+// QTextBlockFormat::LineHeightTypes
+//
 //go:generate stringer -type=QTextBlockFormat__LineHeightTypes
-//QTextBlockFormat::LineHeightTypes
 type QTextBlockFormat__LineHeightTypes int64
 
 const (
@@ -39975,8 +40096,9 @@ func NewQTextCharFormatFromPointer(ptr unsafe.Pointer) (n *QTextCharFormat) {
 func (ptr *QTextCharFormat) DestroyQTextCharFormat() {
 }
 
+// QTextCharFormat::VerticalAlignment
+//
 //go:generate stringer -type=QTextCharFormat__VerticalAlignment
-//QTextCharFormat::VerticalAlignment
 type QTextCharFormat__VerticalAlignment int64
 
 const (
@@ -39989,8 +40111,9 @@ const (
 	QTextCharFormat__AlignBaseline    QTextCharFormat__VerticalAlignment = QTextCharFormat__VerticalAlignment(6)
 )
 
+// QTextCharFormat::UnderlineStyle
+//
 //go:generate stringer -type=QTextCharFormat__UnderlineStyle
-//QTextCharFormat::UnderlineStyle
 type QTextCharFormat__UnderlineStyle int64
 
 var (
@@ -40004,8 +40127,9 @@ var (
 	QTextCharFormat__SpellCheckUnderline QTextCharFormat__UnderlineStyle = QTextCharFormat__UnderlineStyle(7)
 )
 
+// QTextCharFormat::FontPropertiesInheritanceBehavior
+//
 //go:generate stringer -type=QTextCharFormat__FontPropertiesInheritanceBehavior
-//QTextCharFormat::FontPropertiesInheritanceBehavior
 type QTextCharFormat__FontPropertiesInheritanceBehavior int64
 
 const (
@@ -40345,8 +40469,9 @@ func NewQTextCursorFromPointer(ptr unsafe.Pointer) (n *QTextCursor) {
 	return
 }
 
+// QTextCursor::MoveMode
+//
 //go:generate stringer -type=QTextCursor__MoveMode
-//QTextCursor::MoveMode
 type QTextCursor__MoveMode int64
 
 const (
@@ -40354,8 +40479,9 @@ const (
 	QTextCursor__KeepAnchor QTextCursor__MoveMode = QTextCursor__MoveMode(1)
 )
 
+// QTextCursor::MoveOperation
+//
 //go:generate stringer -type=QTextCursor__MoveOperation
-//QTextCursor::MoveOperation
 type QTextCursor__MoveOperation int64
 
 const (
@@ -40386,8 +40512,9 @@ const (
 	QTextCursor__PreviousRow       QTextCursor__MoveOperation = QTextCursor__MoveOperation(24)
 )
 
+// QTextCursor::SelectionType
+//
 //go:generate stringer -type=QTextCursor__SelectionType
-//QTextCursor::SelectionType
 type QTextCursor__SelectionType int64
 
 const (
@@ -40810,8 +40937,9 @@ func NewQTextDocumentFromPointer(ptr unsafe.Pointer) (n *QTextDocument) {
 	return
 }
 
+// QTextDocument::MetaInformation
+//
 //go:generate stringer -type=QTextDocument__MetaInformation
-//QTextDocument::MetaInformation
 type QTextDocument__MetaInformation int64
 
 const (
@@ -40819,8 +40947,9 @@ const (
 	QTextDocument__DocumentUrl   QTextDocument__MetaInformation = QTextDocument__MetaInformation(1)
 )
 
+// QTextDocument::FindFlag
+//
 //go:generate stringer -type=QTextDocument__FindFlag
-//QTextDocument::FindFlag
 type QTextDocument__FindFlag int64
 
 const (
@@ -40829,8 +40958,9 @@ const (
 	QTextDocument__FindWholeWords      QTextDocument__FindFlag = QTextDocument__FindFlag(0x00004)
 )
 
+// QTextDocument::ResourceType
+//
 //go:generate stringer -type=QTextDocument__ResourceType
-//QTextDocument::ResourceType
 type QTextDocument__ResourceType int64
 
 const (
@@ -40840,8 +40970,9 @@ const (
 	QTextDocument__UserResource       QTextDocument__ResourceType = QTextDocument__ResourceType(100)
 )
 
+// QTextDocument::Stacks
+//
 //go:generate stringer -type=QTextDocument__Stacks
-//QTextDocument::Stacks
 type QTextDocument__Stacks int64
 
 const (
@@ -41929,8 +42060,9 @@ func NewQTextFormatFromPointer(ptr unsafe.Pointer) (n *QTextFormat) {
 	return
 }
 
+// QTextFormat::FormatType
+//
 //go:generate stringer -type=QTextFormat__FormatType
-//QTextFormat::FormatType
 type QTextFormat__FormatType int64
 
 const (
@@ -41943,8 +42075,9 @@ const (
 	QTextFormat__UserFormat    QTextFormat__FormatType = QTextFormat__FormatType(100)
 )
 
+// QTextFormat::Property
+//
 //go:generate stringer -type=QTextFormat__Property
-//QTextFormat::Property
 type QTextFormat__Property int64
 
 const (
@@ -42036,8 +42169,9 @@ const (
 	QTextFormat__UserProperty                      QTextFormat__Property = QTextFormat__Property(0x100000)
 )
 
+// QTextFormat::ObjectTypes
+//
 //go:generate stringer -type=QTextFormat__ObjectTypes
-//QTextFormat::ObjectTypes
 type QTextFormat__ObjectTypes int64
 
 const (
@@ -42048,8 +42182,9 @@ const (
 	QTextFormat__UserObject      QTextFormat__ObjectTypes = QTextFormat__ObjectTypes(0x1000)
 )
 
+// QTextFormat::PageBreakFlag
+//
 //go:generate stringer -type=QTextFormat__PageBreakFlag
-//QTextFormat::PageBreakFlag
 type QTextFormat__PageBreakFlag int64
 
 const (
@@ -42661,8 +42796,9 @@ func NewQTextFrameFormatFromPointer(ptr unsafe.Pointer) (n *QTextFrameFormat) {
 func (ptr *QTextFrameFormat) DestroyQTextFrameFormat() {
 }
 
+// QTextFrameFormat::Position
+//
 //go:generate stringer -type=QTextFrameFormat__Position
-//QTextFrameFormat::Position
 type QTextFrameFormat__Position int64
 
 const (
@@ -42671,8 +42807,9 @@ const (
 	QTextFrameFormat__FloatRight QTextFrameFormat__Position = QTextFrameFormat__Position(2)
 )
 
+// QTextFrameFormat::BorderStyle
+//
 //go:generate stringer -type=QTextFrameFormat__BorderStyle
-//QTextFrameFormat::BorderStyle
 type QTextFrameFormat__BorderStyle int64
 
 var (
@@ -43130,8 +43267,9 @@ func NewQTextItemFromPointer(ptr unsafe.Pointer) (n *QTextItem) {
 func (ptr *QTextItem) DestroyQTextItem() {
 }
 
+// QTextItem::RenderFlag
+//
 //go:generate stringer -type=QTextItem__RenderFlag
-//QTextItem::RenderFlag
 type QTextItem__RenderFlag int64
 
 const (
@@ -43214,8 +43352,9 @@ func NewQTextLayoutFromPointer(ptr unsafe.Pointer) (n *QTextLayout) {
 	return
 }
 
+// QTextLayout::CursorMode
+//
 //go:generate stringer -type=QTextLayout__CursorMode
-//QTextLayout::CursorMode
 type QTextLayout__CursorMode int64
 
 const (
@@ -43478,8 +43617,9 @@ func NewQTextLengthFromPointer(ptr unsafe.Pointer) (n *QTextLength) {
 func (ptr *QTextLength) DestroyQTextLength() {
 }
 
+// QTextLength::Type
+//
 //go:generate stringer -type=QTextLength__Type
-//QTextLength::Type
 type QTextLength__Type int64
 
 const (
@@ -43558,8 +43698,9 @@ func NewQTextLineFromPointer(ptr unsafe.Pointer) (n *QTextLine) {
 func (ptr *QTextLine) DestroyQTextLine() {
 }
 
+// QTextLine::Edge
+//
 //go:generate stringer -type=QTextLine__Edge
-//QTextLine::Edge
 type QTextLine__Edge int64
 
 const (
@@ -43567,8 +43708,9 @@ const (
 	QTextLine__Trailing QTextLine__Edge = QTextLine__Edge(1)
 )
 
+// QTextLine::CursorPosition
+//
 //go:generate stringer -type=QTextLine__CursorPosition
-//QTextLine::CursorPosition
 type QTextLine__CursorPosition int64
 
 const (
@@ -43873,8 +44015,9 @@ func NewQTextListFormatFromPointer(ptr unsafe.Pointer) (n *QTextListFormat) {
 func (ptr *QTextListFormat) DestroyQTextListFormat() {
 }
 
+// QTextListFormat::Style
+//
 //go:generate stringer -type=QTextListFormat__Style
-//QTextListFormat::Style
 type QTextListFormat__Style int64
 
 var (
@@ -44269,8 +44412,9 @@ func NewQTextOptionFromPointer(ptr unsafe.Pointer) (n *QTextOption) {
 	return
 }
 
+// QTextOption::TabType
+//
 //go:generate stringer -type=QTextOption__TabType
-//QTextOption::TabType
 type QTextOption__TabType int64
 
 const (
@@ -44280,8 +44424,9 @@ const (
 	QTextOption__DelimiterTab QTextOption__TabType = QTextOption__TabType(3)
 )
 
+// QTextOption::WrapMode
+//
 //go:generate stringer -type=QTextOption__WrapMode
-//QTextOption::WrapMode
 type QTextOption__WrapMode int64
 
 const (
@@ -44292,8 +44437,9 @@ const (
 	QTextOption__WrapAtWordBoundaryOrAnywhere QTextOption__WrapMode = QTextOption__WrapMode(4)
 )
 
+// QTextOption::Flag
+//
 //go:generate stringer -type=QTextOption__Flag
-//QTextOption::Flag
 type QTextOption__Flag int64
 
 const (
@@ -44961,8 +45107,9 @@ func NewQTouchDeviceFromPointer(ptr unsafe.Pointer) (n *QTouchDevice) {
 	return
 }
 
+// QTouchDevice::DeviceType
+//
 //go:generate stringer -type=QTouchDevice__DeviceType
-//QTouchDevice::DeviceType
 type QTouchDevice__DeviceType int64
 
 const (
@@ -44970,8 +45117,9 @@ const (
 	QTouchDevice__TouchPad    QTouchDevice__DeviceType = QTouchDevice__DeviceType(1)
 )
 
+// QTouchDevice::CapabilityFlag
+//
 //go:generate stringer -type=QTouchDevice__CapabilityFlag
-//QTouchDevice::CapabilityFlag
 type QTouchDevice__CapabilityFlag int64
 
 const (
@@ -45216,8 +45364,9 @@ func NewQTransformFromPointer(ptr unsafe.Pointer) (n *QTransform) {
 func (ptr *QTransform) DestroyQTransform() {
 }
 
+// QTransform::TransformationType
+//
 //go:generate stringer -type=QTransform__TransformationType
-//QTransform::TransformationType
 type QTransform__TransformationType int64
 
 const (
@@ -45562,8 +45711,9 @@ func NewQValidatorFromPointer(ptr unsafe.Pointer) (n *QValidator) {
 	return
 }
 
+// QValidator::State
+//
 //go:generate stringer -type=QValidator__State
-//QValidator::State
 type QValidator__State int64
 
 const (
@@ -46565,8 +46715,9 @@ func NewQVulkanInstanceFromPointer(ptr unsafe.Pointer) (n *QVulkanInstance) {
 	return
 }
 
+// QVulkanInstance::Flag
+//
 //go:generate stringer -type=QVulkanInstance__Flag
-//QVulkanInstance::Flag
 type QVulkanInstance__Flag int64
 
 const (
@@ -46666,8 +46817,9 @@ func NewQVulkanWindowFromPointer(ptr unsafe.Pointer) (n *QVulkanWindow) {
 	return
 }
 
+// QVulkanWindow::Flag
+//
 //go:generate stringer -type=QVulkanWindow__Flag
-//QVulkanWindow::Flag
 type QVulkanWindow__Flag int64
 
 const (
@@ -46975,8 +47127,9 @@ func NewQWindowFromPointer(ptr unsafe.Pointer) (n *QWindow) {
 	return
 }
 
+// QWindow::Visibility
+//
 //go:generate stringer -type=QWindow__Visibility
-//QWindow::Visibility
 type QWindow__Visibility int64
 
 const (
@@ -46988,8 +47141,9 @@ const (
 	QWindow__FullScreen          QWindow__Visibility = QWindow__Visibility(5)
 )
 
+// QWindow::AncestorMode
+//
 //go:generate stringer -type=QWindow__AncestorMode
-//QWindow::AncestorMode
 type QWindow__AncestorMode int64
 
 const (

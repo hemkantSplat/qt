@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/therecipe/qt/internal/binding/parser"
-	"github.com/therecipe/qt/internal/utils"
+	"github.com/hemkantSplat/qt/internal/binding/parser"
+	"github.com/hemkantSplat/qt/internal/utils"
 )
 
 func GoOutput(name, value string, f *parser.Function, p string) string {
@@ -642,9 +642,9 @@ func cppOutputPacked(name, value string, f *parser.Function) string {
 	return out
 }
 
-//TODO: remove hex encoding once QByteArray <-> ArrayBuffer conversion is possible and/or more TypedArray functions are available for gopherjs/wasm
-//TODO: make exemption for QString and QStringList for now? they usually won't need the extra hex encoding ...
-//TOOD: or use malloc and simply return a pointer? instead waiting for gopherjs/wasm?
+// TODO: remove hex encoding once QByteArray <-> ArrayBuffer conversion is possible and/or more TypedArray functions are available for gopherjs/wasm
+// TODO: make exemption for QString and QStringList for now? they usually won't need the extra hex encoding ...
+// TOOD: or use malloc and simply return a pointer? instead waiting for gopherjs/wasm?
 func cppOutputPackingStringForJs(name, length string) string {
 	if parser.UseJs() {
 		return fmt.Sprintf("emscripten::val ret = emscripten::val::object(); ret.set(\"data\", QByteArray::fromRawData(%v, %v).toHex().toStdString()); ret.set(\"len\", %v); ret;", name, length, length)

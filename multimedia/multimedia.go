@@ -1,13 +1,14 @@
+//go:build !minimal
 // +build !minimal
 
 package multimedia
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/gui"
-	"github.com/therecipe/qt/internal"
-	"github.com/therecipe/qt/network"
-	"github.com/therecipe/qt/widgets"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/gui"
+	"github.com/hemkantSplat/qt/internal"
+	"github.com/hemkantSplat/qt/network"
+	"github.com/hemkantSplat/qt/widgets"
 	"unsafe"
 )
 
@@ -10782,8 +10783,9 @@ func NewQAbstractVideoBufferFromPointer(ptr unsafe.Pointer) (n *QAbstractVideoBu
 	return
 }
 
+// QAbstractVideoBuffer::MapMode
+//
 //go:generate stringer -type=QAbstractVideoBuffer__MapMode
-//QAbstractVideoBuffer::MapMode
 type QAbstractVideoBuffer__MapMode int64
 
 const (
@@ -10793,8 +10795,9 @@ const (
 	QAbstractVideoBuffer__ReadWrite QAbstractVideoBuffer__MapMode = QAbstractVideoBuffer__MapMode(QAbstractVideoBuffer__ReadOnly | QAbstractVideoBuffer__WriteOnly)
 )
 
+// QAbstractVideoBuffer::HandleType
+//
 //go:generate stringer -type=QAbstractVideoBuffer__HandleType
-//QAbstractVideoBuffer::HandleType
 type QAbstractVideoBuffer__HandleType int64
 
 const (
@@ -11171,8 +11174,9 @@ func NewQAbstractVideoSurfaceFromPointer(ptr unsafe.Pointer) (n *QAbstractVideoS
 	return
 }
 
+// QAbstractVideoSurface::Error
+//
 //go:generate stringer -type=QAbstractVideoSurface__Error
-//QAbstractVideoSurface::Error
 type QAbstractVideoSurface__Error int64
 
 const (
@@ -13566,8 +13570,9 @@ func NewQAudioFromPointer(ptr unsafe.Pointer) (n *QAudio) {
 func (ptr *QAudio) DestroyQAudio() {
 }
 
+// QAudio::Error
+//
 //go:generate stringer -type=QAudio__Error
-//QAudio::Error
 type QAudio__Error int64
 
 const (
@@ -13578,8 +13583,9 @@ const (
 	QAudio__FatalError    QAudio__Error = QAudio__Error(4)
 )
 
+// QAudio::State
+//
 //go:generate stringer -type=QAudio__State
-//QAudio::State
 type QAudio__State int64
 
 const (
@@ -13590,8 +13596,9 @@ const (
 	QAudio__InterruptedState QAudio__State = QAudio__State(4)
 )
 
+// QAudio::Mode
+//
 //go:generate stringer -type=QAudio__Mode
-//QAudio::Mode
 type QAudio__Mode int64
 
 const (
@@ -13599,8 +13606,9 @@ const (
 	QAudio__AudioOutput QAudio__Mode = QAudio__Mode(1)
 )
 
+// QAudio::Role
+//
 //go:generate stringer -type=QAudio__Role
-//QAudio::Role
 type QAudio__Role int64
 
 const (
@@ -13617,8 +13625,9 @@ const (
 	QAudio__CustomRole             QAudio__Role = QAudio__Role(10)
 )
 
+// QAudio::VolumeScale
+//
 //go:generate stringer -type=QAudio__VolumeScale
-//QAudio::VolumeScale
 type QAudio__VolumeScale int64
 
 const (
@@ -13797,8 +13806,9 @@ func NewQAudioDecoderFromPointer(ptr unsafe.Pointer) (n *QAudioDecoder) {
 	return
 }
 
+// QAudioDecoder::State
+//
 //go:generate stringer -type=QAudioDecoder__State
-//QAudioDecoder::State
 type QAudioDecoder__State int64
 
 const (
@@ -13806,8 +13816,9 @@ const (
 	QAudioDecoder__DecodingState QAudioDecoder__State = QAudioDecoder__State(1)
 )
 
+// QAudioDecoder::Error
+//
 //go:generate stringer -type=QAudioDecoder__Error
-//QAudioDecoder::Error
 type QAudioDecoder__Error int64
 
 const (
@@ -15141,8 +15152,9 @@ func NewQAudioFormatFromPointer(ptr unsafe.Pointer) (n *QAudioFormat) {
 	return
 }
 
+// QAudioFormat::SampleType
+//
 //go:generate stringer -type=QAudioFormat__SampleType
-//QAudioFormat::SampleType
 type QAudioFormat__SampleType int64
 
 const (
@@ -15152,8 +15164,9 @@ const (
 	QAudioFormat__Float       QAudioFormat__SampleType = QAudioFormat__SampleType(3)
 )
 
+// QAudioFormat::Endian
+//
 //go:generate stringer -type=QAudioFormat__Endian
-//QAudioFormat::Endian
 type QAudioFormat__Endian int64
 
 const (
@@ -17119,8 +17132,9 @@ func NewQCameraFromPointer(ptr unsafe.Pointer) (n *QCamera) {
 	return
 }
 
+// QCamera::Status
+//
 //go:generate stringer -type=QCamera__Status
-//QCamera::Status
 type QCamera__Status int64
 
 const (
@@ -17135,8 +17149,9 @@ const (
 	QCamera__ActiveStatus      QCamera__Status = QCamera__Status(8)
 )
 
+// QCamera::State
+//
 //go:generate stringer -type=QCamera__State
-//QCamera::State
 type QCamera__State int64
 
 const (
@@ -17145,8 +17160,9 @@ const (
 	QCamera__ActiveState   QCamera__State = QCamera__State(2)
 )
 
+// QCamera::CaptureMode
+//
 //go:generate stringer -type=QCamera__CaptureMode
-//QCamera::CaptureMode
 type QCamera__CaptureMode int64
 
 const (
@@ -17155,8 +17171,9 @@ const (
 	QCamera__CaptureVideo      QCamera__CaptureMode = QCamera__CaptureMode(0x02)
 )
 
+// QCamera::Error
+//
 //go:generate stringer -type=QCamera__Error
-//QCamera::Error
 type QCamera__Error int64
 
 const (
@@ -17167,8 +17184,9 @@ const (
 	QCamera__NotSupportedFeatureError QCamera__Error = QCamera__Error(4)
 )
 
+// QCamera::LockStatus
+//
 //go:generate stringer -type=QCamera__LockStatus
-//QCamera::LockStatus
 type QCamera__LockStatus int64
 
 const (
@@ -17177,8 +17195,9 @@ const (
 	QCamera__Locked    QCamera__LockStatus = QCamera__LockStatus(2)
 )
 
+// QCamera::LockChangeReason
+//
 //go:generate stringer -type=QCamera__LockChangeReason
-//QCamera::LockChangeReason
 type QCamera__LockChangeReason int64
 
 const (
@@ -17189,8 +17208,9 @@ const (
 	QCamera__LockTemporaryLost QCamera__LockChangeReason = QCamera__LockChangeReason(4)
 )
 
+// QCamera::LockType
+//
 //go:generate stringer -type=QCamera__LockType
-//QCamera::LockType
 type QCamera__LockType int64
 
 const (
@@ -17200,8 +17220,9 @@ const (
 	QCamera__LockFocus        QCamera__LockType = QCamera__LockType(0x04)
 )
 
+// QCamera::Position
+//
 //go:generate stringer -type=QCamera__Position
-//QCamera::Position
 type QCamera__Position int64
 
 const (
@@ -18037,8 +18058,9 @@ func NewQCameraControlFromPointer(ptr unsafe.Pointer) (n *QCameraControl) {
 	return
 }
 
+// QCameraControl::PropertyChangeType
+//
 //go:generate stringer -type=QCameraControl__PropertyChangeType
-//QCameraControl::PropertyChangeType
 type QCameraControl__PropertyChangeType int64
 
 const (
@@ -18290,8 +18312,9 @@ func NewQCameraExposureFromPointer(ptr unsafe.Pointer) (n *QCameraExposure) {
 func (ptr *QCameraExposure) DestroyQCameraExposure() {
 }
 
+// QCameraExposure::FlashMode
+//
 //go:generate stringer -type=QCameraExposure__FlashMode
-//QCameraExposure::FlashMode
 type QCameraExposure__FlashMode int64
 
 const (
@@ -18307,8 +18330,9 @@ const (
 	QCameraExposure__FlashManual               QCameraExposure__FlashMode = QCameraExposure__FlashMode(0x200)
 )
 
+// QCameraExposure::ExposureMode
+//
 //go:generate stringer -type=QCameraExposure__ExposureMode
-//QCameraExposure::ExposureMode
 type QCameraExposure__ExposureMode int64
 
 const (
@@ -18336,8 +18360,9 @@ const (
 	QCameraExposure__ExposureModeVendor    QCameraExposure__ExposureMode = QCameraExposure__ExposureMode(1000)
 )
 
+// QCameraExposure::MeteringMode
+//
 //go:generate stringer -type=QCameraExposure__MeteringMode
-//QCameraExposure::MeteringMode
 type QCameraExposure__MeteringMode int64
 
 const (
@@ -18949,8 +18974,9 @@ func NewQCameraExposureControlFromPointer(ptr unsafe.Pointer) (n *QCameraExposur
 	return
 }
 
+// QCameraExposureControl::ExposureParameter
+//
 //go:generate stringer -type=QCameraExposureControl__ExposureParameter
-//QCameraExposureControl::ExposureParameter
 type QCameraExposureControl__ExposureParameter int64
 
 const (
@@ -19175,8 +19201,9 @@ func NewQCameraFeedbackControlFromPointer(ptr unsafe.Pointer) (n *QCameraFeedbac
 	return
 }
 
+// QCameraFeedbackControl::EventType
+//
 //go:generate stringer -type=QCameraFeedbackControl__EventType
-//QCameraFeedbackControl::EventType
 type QCameraFeedbackControl__EventType int64
 
 const (
@@ -19491,8 +19518,9 @@ func NewQCameraFocusFromPointer(ptr unsafe.Pointer) (n *QCameraFocus) {
 func (ptr *QCameraFocus) DestroyQCameraFocus() {
 }
 
+// QCameraFocus::FocusMode
+//
 //go:generate stringer -type=QCameraFocus__FocusMode
-//QCameraFocus::FocusMode
 type QCameraFocus__FocusMode int64
 
 const (
@@ -19504,8 +19532,9 @@ const (
 	QCameraFocus__MacroFocus      QCameraFocus__FocusMode = QCameraFocus__FocusMode(0x20)
 )
 
+// QCameraFocus::FocusPointMode
+//
 //go:generate stringer -type=QCameraFocus__FocusPointMode
-//QCameraFocus::FocusPointMode
 type QCameraFocus__FocusPointMode int64
 
 const (
@@ -20054,8 +20083,9 @@ func NewQCameraFocusZoneFromPointer(ptr unsafe.Pointer) (n *QCameraFocusZone) {
 	return
 }
 
+// QCameraFocusZone::FocusZoneStatus
+//
 //go:generate stringer -type=QCameraFocusZone__FocusZoneStatus
-//QCameraFocusZone::FocusZoneStatus
 type QCameraFocusZone__FocusZoneStatus int64
 
 const (
@@ -20142,8 +20172,9 @@ func NewQCameraImageCaptureFromPointer(ptr unsafe.Pointer) (n *QCameraImageCaptu
 	return
 }
 
+// QCameraImageCapture::Error
+//
 //go:generate stringer -type=QCameraImageCapture__Error
-//QCameraImageCapture::Error
 type QCameraImageCapture__Error int64
 
 const (
@@ -20155,16 +20186,18 @@ const (
 	QCameraImageCapture__FormatError              QCameraImageCapture__Error = QCameraImageCapture__Error(5)
 )
 
+// QCameraImageCapture::DriveMode
+//
 //go:generate stringer -type=QCameraImageCapture__DriveMode
-//QCameraImageCapture::DriveMode
 type QCameraImageCapture__DriveMode int64
 
 const (
 	QCameraImageCapture__SingleImageCapture QCameraImageCapture__DriveMode = QCameraImageCapture__DriveMode(0)
 )
 
+// QCameraImageCapture::CaptureDestination
+//
 //go:generate stringer -type=QCameraImageCapture__CaptureDestination
-//QCameraImageCapture::CaptureDestination
 type QCameraImageCapture__CaptureDestination int64
 
 const (
@@ -20975,8 +21008,9 @@ func NewQCameraImageProcessingFromPointer(ptr unsafe.Pointer) (n *QCameraImagePr
 func (ptr *QCameraImageProcessing) DestroyQCameraImageProcessing() {
 }
 
+// QCameraImageProcessing::WhiteBalanceMode
+//
 //go:generate stringer -type=QCameraImageProcessing__WhiteBalanceMode
-//QCameraImageProcessing::WhiteBalanceMode
 type QCameraImageProcessing__WhiteBalanceMode int64
 
 const (
@@ -20992,8 +21026,9 @@ const (
 	QCameraImageProcessing__WhiteBalanceVendor      QCameraImageProcessing__WhiteBalanceMode = QCameraImageProcessing__WhiteBalanceMode(1000)
 )
 
+// QCameraImageProcessing::ColorFilter
+//
 //go:generate stringer -type=QCameraImageProcessing__ColorFilter
-//QCameraImageProcessing::ColorFilter
 type QCameraImageProcessing__ColorFilter int64
 
 const (
@@ -21257,8 +21292,9 @@ func NewQCameraImageProcessingControlFromPointer(ptr unsafe.Pointer) (n *QCamera
 	return
 }
 
+// QCameraImageProcessingControl::ProcessingParameter
+//
 //go:generate stringer -type=QCameraImageProcessingControl__ProcessingParameter
-//QCameraImageProcessingControl::ProcessingParameter
 type QCameraImageProcessingControl__ProcessingParameter int64
 
 const (
@@ -21907,8 +21943,9 @@ func NewQCameraViewfinderSettingsControlFromPointer(ptr unsafe.Pointer) (n *QCam
 	return
 }
 
+// QCameraViewfinderSettingsControl::ViewfinderParameter
+//
 //go:generate stringer -type=QCameraViewfinderSettingsControl__ViewfinderParameter
-//QCameraViewfinderSettingsControl::ViewfinderParameter
 type QCameraViewfinderSettingsControl__ViewfinderParameter int64
 
 const (
@@ -25601,8 +25638,9 @@ func NewQMediaPlayerFromPointer(ptr unsafe.Pointer) (n *QMediaPlayer) {
 	return
 }
 
+// QMediaPlayer::MediaStatus
+//
 //go:generate stringer -type=QMediaPlayer__MediaStatus
-//QMediaPlayer::MediaStatus
 type QMediaPlayer__MediaStatus int64
 
 const (
@@ -25617,8 +25655,9 @@ const (
 	QMediaPlayer__InvalidMedia       QMediaPlayer__MediaStatus = QMediaPlayer__MediaStatus(8)
 )
 
+// QMediaPlayer::Flag
+//
 //go:generate stringer -type=QMediaPlayer__Flag
-//QMediaPlayer::Flag
 type QMediaPlayer__Flag int64
 
 const (
@@ -25627,8 +25666,9 @@ const (
 	QMediaPlayer__VideoSurface   QMediaPlayer__Flag = QMediaPlayer__Flag(0x04)
 )
 
+// QMediaPlayer::Error
+//
 //go:generate stringer -type=QMediaPlayer__Error
-//QMediaPlayer::Error
 type QMediaPlayer__Error int64
 
 const (
@@ -25641,8 +25681,9 @@ const (
 	QMediaPlayer__MediaIsPlaylist     QMediaPlayer__Error = QMediaPlayer__Error(6)
 )
 
+// QMediaPlayer::State
+//
 //go:generate stringer -type=QMediaPlayer__State
-//QMediaPlayer::State
 type QMediaPlayer__State int64
 
 const (
@@ -26965,8 +27006,9 @@ func NewQMediaPlaylistFromPointer(ptr unsafe.Pointer) (n *QMediaPlaylist) {
 	return
 }
 
+// QMediaPlaylist::PlaybackMode
+//
 //go:generate stringer -type=QMediaPlaylist__PlaybackMode
-//QMediaPlaylist::PlaybackMode
 type QMediaPlaylist__PlaybackMode int64
 
 const (
@@ -26977,8 +27019,9 @@ const (
 	QMediaPlaylist__Random            QMediaPlaylist__PlaybackMode = QMediaPlaylist__PlaybackMode(4)
 )
 
+// QMediaPlaylist::Error
+//
 //go:generate stringer -type=QMediaPlaylist__Error
-//QMediaPlaylist::Error
 type QMediaPlaylist__Error int64
 
 const (
@@ -27631,8 +27674,9 @@ func NewQMediaRecorderFromPointer(ptr unsafe.Pointer) (n *QMediaRecorder) {
 	return
 }
 
+// QMediaRecorder::Status
+//
 //go:generate stringer -type=QMediaRecorder__Status
-//QMediaRecorder::Status
 type QMediaRecorder__Status int64
 
 const (
@@ -27646,8 +27690,9 @@ const (
 	QMediaRecorder__FinalizingStatus  QMediaRecorder__Status = QMediaRecorder__Status(7)
 )
 
+// QMediaRecorder::Error
+//
 //go:generate stringer -type=QMediaRecorder__Error
-//QMediaRecorder::Error
 type QMediaRecorder__Error int64
 
 const (
@@ -27657,8 +27702,9 @@ const (
 	QMediaRecorder__OutOfSpaceError QMediaRecorder__Error = QMediaRecorder__Error(3)
 )
 
+// QMediaRecorder::State
+//
 //go:generate stringer -type=QMediaRecorder__State
-//QMediaRecorder::State
 type QMediaRecorder__State int64
 
 const (
@@ -29935,8 +29981,9 @@ func NewQMediaStreamsControlFromPointer(ptr unsafe.Pointer) (n *QMediaStreamsCon
 	return
 }
 
+// QMediaStreamsControl::StreamType
+//
 //go:generate stringer -type=QMediaStreamsControl__StreamType
-//QMediaStreamsControl::StreamType
 type QMediaStreamsControl__StreamType int64
 
 const (
@@ -30829,8 +30876,9 @@ func NewQMultimediaFromPointer(ptr unsafe.Pointer) (n *QMultimedia) {
 func (ptr *QMultimedia) DestroyQMultimedia() {
 }
 
+// QMultimedia::SupportEstimate
+//
 //go:generate stringer -type=QMultimedia__SupportEstimate
-//QMultimedia::SupportEstimate
 type QMultimedia__SupportEstimate int64
 
 const (
@@ -30840,8 +30888,9 @@ const (
 	QMultimedia__PreferredService  QMultimedia__SupportEstimate = QMultimedia__SupportEstimate(3)
 )
 
+// QMultimedia::AvailabilityStatus
+//
 //go:generate stringer -type=QMultimedia__AvailabilityStatus
-//QMultimedia::AvailabilityStatus
 type QMultimedia__AvailabilityStatus int64
 
 const (
@@ -30851,8 +30900,9 @@ const (
 	QMultimedia__ResourceError  QMultimedia__AvailabilityStatus = QMultimedia__AvailabilityStatus(3)
 )
 
+// QMultimedia::EncodingMode
+//
 //go:generate stringer -type=QMultimedia__EncodingMode
-//QMultimedia::EncodingMode
 type QMultimedia__EncodingMode int64
 
 const (
@@ -30862,8 +30912,9 @@ const (
 	QMultimedia__TwoPassEncoding         QMultimedia__EncodingMode = QMultimedia__EncodingMode(3)
 )
 
+// QMultimedia::EncodingQuality
+//
 //go:generate stringer -type=QMultimedia__EncodingQuality
-//QMultimedia::EncodingQuality
 type QMultimedia__EncodingQuality int64
 
 const (
@@ -31430,8 +31481,9 @@ func NewQRadioDataFromPointer(ptr unsafe.Pointer) (n *QRadioData) {
 	return
 }
 
+// QRadioData::Error
+//
 //go:generate stringer -type=QRadioData__Error
-//QRadioData::Error
 type QRadioData__Error int64
 
 const (
@@ -31441,8 +31493,9 @@ const (
 	QRadioData__OutOfRangeError QRadioData__Error = QRadioData__Error(3)
 )
 
+// QRadioData::ProgramType
+//
 //go:generate stringer -type=QRadioData__ProgramType
-//QRadioData::ProgramType
 type QRadioData__ProgramType int64
 
 const (
@@ -32241,8 +32294,9 @@ func NewQRadioTunerFromPointer(ptr unsafe.Pointer) (n *QRadioTuner) {
 	return
 }
 
+// QRadioTuner::Band
+//
 //go:generate stringer -type=QRadioTuner__Band
-//QRadioTuner::Band
 type QRadioTuner__Band int64
 
 const (
@@ -32253,8 +32307,9 @@ const (
 	QRadioTuner__FM2 QRadioTuner__Band = QRadioTuner__Band(4)
 )
 
+// QRadioTuner::Error
+//
 //go:generate stringer -type=QRadioTuner__Error
-//QRadioTuner::Error
 type QRadioTuner__Error int64
 
 const (
@@ -32264,8 +32319,9 @@ const (
 	QRadioTuner__OutOfRangeError QRadioTuner__Error = QRadioTuner__Error(3)
 )
 
+// QRadioTuner::StereoMode
+//
 //go:generate stringer -type=QRadioTuner__StereoMode
-//QRadioTuner::StereoMode
 type QRadioTuner__StereoMode int64
 
 const (
@@ -32274,8 +32330,9 @@ const (
 	QRadioTuner__Auto        QRadioTuner__StereoMode = QRadioTuner__StereoMode(2)
 )
 
+// QRadioTuner::SearchMode
+//
 //go:generate stringer -type=QRadioTuner__SearchMode
-//QRadioTuner::SearchMode
 type QRadioTuner__SearchMode int64
 
 const (
@@ -32283,8 +32340,9 @@ const (
 	QRadioTuner__SearchGetStationId QRadioTuner__SearchMode = QRadioTuner__SearchMode(1)
 )
 
+// QRadioTuner::State
+//
 //go:generate stringer -type=QRadioTuner__State
-//QRadioTuner::State
 type QRadioTuner__State int64
 
 const (
@@ -33743,8 +33801,9 @@ func NewQSoundFromPointer(ptr unsafe.Pointer) (n *QSound) {
 	return
 }
 
+// QSound::Loop
+//
 //go:generate stringer -type=QSound__Loop
-//QSound::Loop
 type QSound__Loop int64
 
 const (
@@ -34004,16 +34063,18 @@ func NewQSoundEffectFromPointer(ptr unsafe.Pointer) (n *QSoundEffect) {
 	return
 }
 
+// QSoundEffect::Loop
+//
 //go:generate stringer -type=QSoundEffect__Loop
-//QSoundEffect::Loop
 type QSoundEffect__Loop int64
 
 const (
 	QSoundEffect__Infinite QSoundEffect__Loop = QSoundEffect__Loop(-2)
 )
 
+// QSoundEffect::Status
+//
 //go:generate stringer -type=QSoundEffect__Status
-//QSoundEffect::Status
 type QSoundEffect__Status int64
 
 const (
@@ -35073,8 +35134,9 @@ func NewQVideoFilterRunnableFromPointer(ptr unsafe.Pointer) (n *QVideoFilterRunn
 func (ptr *QVideoFilterRunnable) DestroyQVideoFilterRunnable() {
 }
 
+// QVideoFilterRunnable::RunFlag
+//
 //go:generate stringer -type=QVideoFilterRunnable__RunFlag
-//QVideoFilterRunnable::RunFlag
 type QVideoFilterRunnable__RunFlag int64
 
 const (
@@ -35138,8 +35200,9 @@ func NewQVideoFrameFromPointer(ptr unsafe.Pointer) (n *QVideoFrame) {
 	return
 }
 
+// QVideoFrame::FieldType
+//
 //go:generate stringer -type=QVideoFrame__FieldType
-//QVideoFrame::FieldType
 type QVideoFrame__FieldType int64
 
 const (
@@ -35149,8 +35212,9 @@ const (
 	QVideoFrame__InterlacedFrame  QVideoFrame__FieldType = QVideoFrame__FieldType(3)
 )
 
+// QVideoFrame::PixelFormat
+//
 //go:generate stringer -type=QVideoFrame__PixelFormat
-//QVideoFrame::PixelFormat
 type QVideoFrame__PixelFormat int64
 
 const (
@@ -35797,8 +35861,9 @@ func NewQVideoSurfaceFormatFromPointer(ptr unsafe.Pointer) (n *QVideoSurfaceForm
 	return
 }
 
+// QVideoSurfaceFormat::Direction
+//
 //go:generate stringer -type=QVideoSurfaceFormat__Direction
-//QVideoSurfaceFormat::Direction
 type QVideoSurfaceFormat__Direction int64
 
 const (
@@ -35806,8 +35871,9 @@ const (
 	QVideoSurfaceFormat__BottomToTop QVideoSurfaceFormat__Direction = QVideoSurfaceFormat__Direction(1)
 )
 
+// QVideoSurfaceFormat::YCbCrColorSpace
+//
 //go:generate stringer -type=QVideoSurfaceFormat__YCbCrColorSpace
-//QVideoSurfaceFormat::YCbCrColorSpace
 type QVideoSurfaceFormat__YCbCrColorSpace int64
 
 const (

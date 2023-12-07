@@ -1,3 +1,4 @@
+//go:build !minimal
 // +build !minimal
 
 package webkit
@@ -8,12 +9,12 @@ package webkit
 //#include "webkit.h"
 import "C"
 import (
-	"github.com/therecipe/qt"
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/gui"
-	"github.com/therecipe/qt/network"
-	"github.com/therecipe/qt/printsupport"
-	"github.com/therecipe/qt/widgets"
+	"github.com/hemkantSplat/qt"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/gui"
+	"github.com/hemkantSplat/qt/network"
+	"github.com/hemkantSplat/qt/printsupport"
+	"github.com/hemkantSplat/qt/widgets"
 	"runtime"
 	"strings"
 	"unsafe"
@@ -2250,8 +2251,9 @@ func NewQWebElementFromPointer(ptr unsafe.Pointer) (n *QWebElement) {
 	return
 }
 
+// QWebElement::StyleResolveStrategy
+//
 //go:generate stringer -type=QWebElement__StyleResolveStrategy
-//QWebElement::StyleResolveStrategy
 type QWebElement__StyleResolveStrategy int64
 
 var (
@@ -3072,8 +3074,9 @@ func NewQWebFrameFromPointer(ptr unsafe.Pointer) (n *QWebFrame) {
 	return
 }
 
+// QWebFrame::RenderLayer
+//
 //go:generate stringer -type=QWebFrame__RenderLayer
-//QWebFrame::RenderLayer
 type QWebFrame__RenderLayer int64
 
 const (
@@ -3083,8 +3086,9 @@ const (
 	QWebFrame__AllLayers      QWebFrame__RenderLayer = QWebFrame__RenderLayer(0xff)
 )
 
+// QWebFrame::ValueOwnership
+//
 //go:generate stringer -type=QWebFrame__ValueOwnership
-//QWebFrame::ValueOwnership
 type QWebFrame__ValueOwnership int64
 
 const (
@@ -6908,8 +6912,9 @@ func NewQWebPageFromPointer(ptr unsafe.Pointer) (n *QWebPage) {
 	return
 }
 
+// QWebPage::ErrorDomain
+//
 //go:generate stringer -type=QWebPage__ErrorDomain
-//QWebPage::ErrorDomain
 type QWebPage__ErrorDomain int64
 
 const (
@@ -6918,8 +6923,9 @@ const (
 	QWebPage__WebKit    QWebPage__ErrorDomain = QWebPage__ErrorDomain(2)
 )
 
+// QWebPage::Extension
+//
 //go:generate stringer -type=QWebPage__Extension
-//QWebPage::Extension
 type QWebPage__Extension int64
 
 const (
@@ -6927,8 +6933,9 @@ const (
 	QWebPage__ErrorPageExtension           QWebPage__Extension = QWebPage__Extension(1)
 )
 
+// QWebPage::Feature
+//
 //go:generate stringer -type=QWebPage__Feature
-//QWebPage::Feature
 type QWebPage__Feature int64
 
 const (
@@ -6936,8 +6943,9 @@ const (
 	QWebPage__Geolocation   QWebPage__Feature = QWebPage__Feature(1)
 )
 
+// QWebPage::FindFlag
+//
 //go:generate stringer -type=QWebPage__FindFlag
-//QWebPage::FindFlag
 type QWebPage__FindFlag int64
 
 const (
@@ -6950,8 +6958,9 @@ const (
 	QWebPage__FindBeginsInSelection             QWebPage__FindFlag = QWebPage__FindFlag(64)
 )
 
+// QWebPage::LinkDelegationPolicy
+//
 //go:generate stringer -type=QWebPage__LinkDelegationPolicy
-//QWebPage::LinkDelegationPolicy
 type QWebPage__LinkDelegationPolicy int64
 
 const (
@@ -6960,8 +6969,9 @@ const (
 	QWebPage__DelegateAllLinks      QWebPage__LinkDelegationPolicy = QWebPage__LinkDelegationPolicy(2)
 )
 
+// QWebPage::MessageLevel
+//
 //go:generate stringer -type=QWebPage__MessageLevel
-//QWebPage::MessageLevel
 type QWebPage__MessageLevel int64
 
 const (
@@ -6972,8 +6982,9 @@ const (
 	QWebPage__InfoMessageLevel    QWebPage__MessageLevel = QWebPage__MessageLevel(5)
 )
 
+// QWebPage::MessageSource
+//
 //go:generate stringer -type=QWebPage__MessageSource
-//QWebPage::MessageSource
 type QWebPage__MessageSource int64
 
 const (
@@ -6990,8 +7001,9 @@ const (
 	QWebPage__OtherMessageSource          QWebPage__MessageSource = QWebPage__MessageSource(10)
 )
 
+// QWebPage::NavigationType
+//
 //go:generate stringer -type=QWebPage__NavigationType
-//QWebPage::NavigationType
 type QWebPage__NavigationType int64
 
 const (
@@ -7003,8 +7015,9 @@ const (
 	QWebPage__NavigationTypeOther           QWebPage__NavigationType = QWebPage__NavigationType(5)
 )
 
+// QWebPage::PermissionPolicy
+//
 //go:generate stringer -type=QWebPage__PermissionPolicy
-//QWebPage::PermissionPolicy
 type QWebPage__PermissionPolicy int64
 
 const (
@@ -7013,8 +7026,9 @@ const (
 	QWebPage__PermissionDeniedByUser  QWebPage__PermissionPolicy = QWebPage__PermissionPolicy(2)
 )
 
+// QWebPage::VisibilityState
+//
 //go:generate stringer -type=QWebPage__VisibilityState
-//QWebPage::VisibilityState
 type QWebPage__VisibilityState int64
 
 const (
@@ -7024,8 +7038,9 @@ const (
 	QWebPage__VisibilityStateUnloaded  QWebPage__VisibilityState = QWebPage__VisibilityState(3)
 )
 
+// QWebPage::WebAction
+//
 //go:generate stringer -type=QWebPage__WebAction
-//QWebPage::WebAction
 type QWebPage__WebAction int64
 
 const (
@@ -7110,8 +7125,9 @@ const (
 	QWebPage__WebActionCount              QWebPage__WebAction = QWebPage__WebAction(77)
 )
 
+// QWebPage::WebWindowType
+//
 //go:generate stringer -type=QWebPage__WebWindowType
-//QWebPage::WebWindowType
 type QWebPage__WebWindowType int64
 
 const (
@@ -10114,8 +10130,9 @@ func NewQWebSecurityOriginFromPointer(ptr unsafe.Pointer) (n *QWebSecurityOrigin
 	return
 }
 
+// QWebSecurityOrigin::SubdomainSetting
+//
 //go:generate stringer -type=QWebSecurityOrigin__SubdomainSetting
-//QWebSecurityOrigin::SubdomainSetting
 type QWebSecurityOrigin__SubdomainSetting int64
 
 const (
@@ -10388,8 +10405,9 @@ func (ptr *QWebSettings) DestroyQWebSettings() {
 	}
 }
 
+// QWebSettings::FontFamily
+//
 //go:generate stringer -type=QWebSettings__FontFamily
-//QWebSettings::FontFamily
 type QWebSettings__FontFamily int64
 
 const (
@@ -10401,8 +10419,9 @@ const (
 	QWebSettings__FantasyFont   QWebSettings__FontFamily = QWebSettings__FontFamily(5)
 )
 
+// QWebSettings::FontSize
+//
 //go:generate stringer -type=QWebSettings__FontSize
-//QWebSettings::FontSize
 type QWebSettings__FontSize int64
 
 const (
@@ -10412,8 +10431,9 @@ const (
 	QWebSettings__DefaultFixedFontSize   QWebSettings__FontSize = QWebSettings__FontSize(3)
 )
 
+// QWebSettings::ThirdPartyCookiePolicy
+//
 //go:generate stringer -type=QWebSettings__ThirdPartyCookiePolicy
-//QWebSettings::ThirdPartyCookiePolicy
 type QWebSettings__ThirdPartyCookiePolicy int64
 
 const (
@@ -10422,8 +10442,9 @@ const (
 	QWebSettings__AllowThirdPartyWithExistingCookies QWebSettings__ThirdPartyCookiePolicy = QWebSettings__ThirdPartyCookiePolicy(2)
 )
 
+// QWebSettings::WebAttribute
+//
 //go:generate stringer -type=QWebSettings__WebAttribute
-//QWebSettings::WebAttribute
 type QWebSettings__WebAttribute int64
 
 var (
@@ -10467,8 +10488,9 @@ var (
 	QWebSettings__FullScreenSupportEnabled          QWebSettings__WebAttribute = QWebSettings__WebAttribute(C.QWebSettings_FullScreenSupportEnabled_Type())
 )
 
+// QWebSettings::WebGraphic
+//
 //go:generate stringer -type=QWebSettings__WebGraphic
-//QWebSettings::WebGraphic
 type QWebSettings__WebGraphic int64
 
 const (

@@ -1,11 +1,12 @@
+//go:build !minimal
 // +build !minimal
 
 package qml
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/internal"
-	"github.com/therecipe/qt/network"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/internal"
+	"github.com/hemkantSplat/qt/network"
 	"unsafe"
 )
 
@@ -57,8 +58,9 @@ func NewQJSEngineFromPointer(ptr unsafe.Pointer) (n *QJSEngine) {
 	return
 }
 
+// QJSEngine::Extension
+//
 //go:generate stringer -type=QJSEngine__Extension
-//QJSEngine::Extension
 type QJSEngine__Extension int64
 
 const (
@@ -325,8 +327,9 @@ func NewQJSValueFromPointer(ptr unsafe.Pointer) (n *QJSValue) {
 	return
 }
 
+// QJSValue::SpecialValue
+//
 //go:generate stringer -type=QJSValue__SpecialValue
-//QJSValue::SpecialValue
 type QJSValue__SpecialValue int64
 
 const (
@@ -334,8 +337,9 @@ const (
 	QJSValue__UndefinedValue QJSValue__SpecialValue = QJSValue__SpecialValue(1)
 )
 
+// QJSValue::ErrorType
+//
 //go:generate stringer -type=QJSValue__ErrorType
-//QJSValue::ErrorType
 type QJSValue__ErrorType int64
 
 const (
@@ -752,8 +756,9 @@ func NewQQmlAbstractUrlInterceptorFromPointer(ptr unsafe.Pointer) (n *QQmlAbstra
 	return
 }
 
+// QQmlAbstractUrlInterceptor::DataType
+//
 //go:generate stringer -type=QQmlAbstractUrlInterceptor__DataType
-//QQmlAbstractUrlInterceptor::DataType
 type QQmlAbstractUrlInterceptor__DataType int64
 
 const (
@@ -1028,8 +1033,9 @@ func NewQQmlComponentFromPointer(ptr unsafe.Pointer) (n *QQmlComponent) {
 	return
 }
 
+// QQmlComponent::CompilationMode
+//
 //go:generate stringer -type=QQmlComponent__CompilationMode
-//QQmlComponent::CompilationMode
 type QQmlComponent__CompilationMode int64
 
 const (
@@ -1037,8 +1043,9 @@ const (
 	QQmlComponent__Asynchronous      QQmlComponent__CompilationMode = QQmlComponent__CompilationMode(1)
 )
 
+// QQmlComponent::Status
+//
 //go:generate stringer -type=QQmlComponent__Status
-//QQmlComponent::Status
 type QQmlComponent__Status int64
 
 const (
@@ -1710,8 +1717,9 @@ func NewQQmlDebuggingEnablerFromPointer(ptr unsafe.Pointer) (n *QQmlDebuggingEna
 func (ptr *QQmlDebuggingEnabler) DestroyQQmlDebuggingEnabler() {
 }
 
+// QQmlDebuggingEnabler::StartMode
+//
 //go:generate stringer -type=QQmlDebuggingEnabler__StartMode
-//QQmlDebuggingEnabler::StartMode
 type QQmlDebuggingEnabler__StartMode int64
 
 const (
@@ -1882,8 +1890,9 @@ func NewQQmlEngineFromPointer(ptr unsafe.Pointer) (n *QQmlEngine) {
 	return
 }
 
+// QQmlEngine::ObjectOwnership
+//
 //go:generate stringer -type=QQmlEngine__ObjectOwnership
-//QQmlEngine::ObjectOwnership
 type QQmlEngine__ObjectOwnership int64
 
 const (
@@ -3086,8 +3095,9 @@ func NewQQmlImageProviderBaseFromPointer(ptr unsafe.Pointer) (n *QQmlImageProvid
 func (ptr *QQmlImageProviderBase) DestroyQQmlImageProviderBase() {
 }
 
+// QQmlImageProviderBase::ImageType
+//
 //go:generate stringer -type=QQmlImageProviderBase__ImageType
-//QQmlImageProviderBase::ImageType
 type QQmlImageProviderBase__ImageType int64
 
 const (
@@ -3098,8 +3108,9 @@ const (
 	QQmlImageProviderBase__ImageResponse QQmlImageProviderBase__ImageType = QQmlImageProviderBase__ImageType(4)
 )
 
+// QQmlImageProviderBase::Flag
+//
 //go:generate stringer -type=QQmlImageProviderBase__Flag
-//QQmlImageProviderBase::Flag
 type QQmlImageProviderBase__Flag int64
 
 const (
@@ -3266,8 +3277,9 @@ func NewQQmlIncubatorFromPointer(ptr unsafe.Pointer) (n *QQmlIncubator) {
 func (ptr *QQmlIncubator) DestroyQQmlIncubator() {
 }
 
+// QQmlIncubator::IncubationMode
+//
 //go:generate stringer -type=QQmlIncubator__IncubationMode
-//QQmlIncubator::IncubationMode
 type QQmlIncubator__IncubationMode int64
 
 const (
@@ -3276,8 +3288,9 @@ const (
 	QQmlIncubator__Synchronous          QQmlIncubator__IncubationMode = QQmlIncubator__IncubationMode(2)
 )
 
+// QQmlIncubator::Status
+//
 //go:generate stringer -type=QQmlIncubator__Status
-//QQmlIncubator::Status
 type QQmlIncubator__Status int64
 
 const (
@@ -3814,8 +3827,9 @@ func NewQQmlPropertyFromPointer(ptr unsafe.Pointer) (n *QQmlProperty) {
 func (ptr *QQmlProperty) DestroyQQmlProperty() {
 }
 
+// QQmlProperty::PropertyTypeCategory
+//
 //go:generate stringer -type=QQmlProperty__PropertyTypeCategory
-//QQmlProperty::PropertyTypeCategory
 type QQmlProperty__PropertyTypeCategory int64
 
 const (
@@ -3825,8 +3839,9 @@ const (
 	QQmlProperty__Normal          QQmlProperty__PropertyTypeCategory = QQmlProperty__PropertyTypeCategory(3)
 )
 
+// QQmlProperty::Type
+//
 //go:generate stringer -type=QQmlProperty__Type
-//QQmlProperty::Type
 type QQmlProperty__Type int64
 
 const (

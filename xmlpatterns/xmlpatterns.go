@@ -1,11 +1,12 @@
+//go:build !minimal
 // +build !minimal
 
 package xmlpatterns
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/internal"
-	"github.com/therecipe/qt/network"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/internal"
+	"github.com/hemkantSplat/qt/network"
 	"unsafe"
 )
 
@@ -421,8 +422,9 @@ func NewQAbstractXmlNodeModelFromPointer(ptr unsafe.Pointer) (n *QAbstractXmlNod
 	return
 }
 
+// QAbstractXmlNodeModel::SimpleAxis
+//
 //go:generate stringer -type=QAbstractXmlNodeModel__SimpleAxis
-//QAbstractXmlNodeModel::SimpleAxis
 type QAbstractXmlNodeModel__SimpleAxis int64
 
 const (
@@ -1629,8 +1631,9 @@ func NewQXmlNodeModelIndexFromPointer(ptr unsafe.Pointer) (n *QXmlNodeModelIndex
 func (ptr *QXmlNodeModelIndex) DestroyQXmlNodeModelIndex() {
 }
 
+// QXmlNodeModelIndex::NodeKind
+//
 //go:generate stringer -type=QXmlNodeModelIndex__NodeKind
-//QXmlNodeModelIndex::NodeKind
 type QXmlNodeModelIndex__NodeKind int64
 
 const (
@@ -1643,8 +1646,9 @@ const (
 	QXmlNodeModelIndex__Text                  QXmlNodeModelIndex__NodeKind = QXmlNodeModelIndex__NodeKind(64)
 )
 
+// QXmlNodeModelIndex::DocumentOrder
+//
 //go:generate stringer -type=QXmlNodeModelIndex__DocumentOrder
-//QXmlNodeModelIndex::DocumentOrder
 type QXmlNodeModelIndex__DocumentOrder int64
 
 const (
@@ -1745,8 +1749,9 @@ func NewQXmlQueryFromPointer(ptr unsafe.Pointer) (n *QXmlQuery) {
 	return
 }
 
+// QXmlQuery::QueryLanguage
+//
 //go:generate stringer -type=QXmlQuery__QueryLanguage
-//QXmlQuery::QueryLanguage
 type QXmlQuery__QueryLanguage int64
 
 const (

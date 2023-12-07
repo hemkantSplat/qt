@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package gamepad
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/internal"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/internal"
 	"unsafe"
 )
 

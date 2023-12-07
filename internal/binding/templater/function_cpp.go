@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/therecipe/qt/internal/binding/converter"
-	"github.com/therecipe/qt/internal/binding/parser"
-	"github.com/therecipe/qt/internal/utils"
+	"github.com/hemkantSplat/qt/internal/binding/converter"
+	"github.com/hemkantSplat/qt/internal/binding/parser"
+	"github.com/hemkantSplat/qt/internal/utils"
 )
 
 func cppFunctionCallback(function *parser.Function) string {
@@ -157,7 +157,7 @@ func cppFunctionHeader(function *parser.Function) string {
 	return ""
 }
 
-//TODO:
+// TODO:
 func cppFunctionUnused(function *parser.Function, body string) string {
 
 	var tmp = make([]string, 0)

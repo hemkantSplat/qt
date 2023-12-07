@@ -1,10 +1,11 @@
+//go:build !minimal
 // +build !minimal
 
 package sensors
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/internal"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/internal"
 	"unsafe"
 )
 
@@ -1083,8 +1084,9 @@ func NewQAccelerometerFromPointer(ptr unsafe.Pointer) (n *QAccelerometer) {
 	return
 }
 
+// QAccelerometer::AccelerationMode
+//
 //go:generate stringer -type=QAccelerometer__AccelerationMode
-//QAccelerometer::AccelerationMode
 type QAccelerometer__AccelerationMode int64
 
 const (
@@ -1616,8 +1618,9 @@ func NewQAmbientLightReadingFromPointer(ptr unsafe.Pointer) (n *QAmbientLightRea
 func (ptr *QAmbientLightReading) DestroyQAmbientLightReading() {
 }
 
+// QAmbientLightReading::LightLevel
+//
 //go:generate stringer -type=QAmbientLightReading__LightLevel
-//QAmbientLightReading::LightLevel
 type QAmbientLightReading__LightLevel int64
 
 const (
@@ -4003,8 +4006,9 @@ func NewQOrientationReadingFromPointer(ptr unsafe.Pointer) (n *QOrientationReadi
 func (ptr *QOrientationReading) DestroyQOrientationReading() {
 }
 
+// QOrientationReading::Orientation
+//
 //go:generate stringer -type=QOrientationReading__Orientation
-//QOrientationReading::Orientation
 type QOrientationReading__Orientation int64
 
 const (
@@ -4809,8 +4813,9 @@ func NewQSensorFromPointer(ptr unsafe.Pointer) (n *QSensor) {
 	return
 }
 
+// QSensor::Feature
+//
 //go:generate stringer -type=QSensor__Feature
-//QSensor::Feature
 type QSensor__Feature int64
 
 const (
@@ -4825,8 +4830,9 @@ const (
 	QSensor__Reserved                  QSensor__Feature = QSensor__Feature(257)
 )
 
+// QSensor::AxesOrientationMode
+//
 //go:generate stringer -type=QSensor__AxesOrientationMode
-//QSensor::AxesOrientationMode
 type QSensor__AxesOrientationMode int64
 
 const (
@@ -7217,8 +7223,9 @@ func NewQTapReadingFromPointer(ptr unsafe.Pointer) (n *QTapReading) {
 func (ptr *QTapReading) DestroyQTapReading() {
 }
 
+// QTapReading::TapDirection
+//
 //go:generate stringer -type=QTapReading__TapDirection
-//QTapReading::TapDirection
 type QTapReading__TapDirection int64
 
 const (

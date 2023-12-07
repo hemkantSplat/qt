@@ -1,1 +1,1 @@
-module github.com/therecipe/qt/internal/binding/files/docs/5.11.1
+module github.com/hemkantSplat/qt/internal/binding/files/docs/5.11.1

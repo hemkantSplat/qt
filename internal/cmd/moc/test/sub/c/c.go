@@ -1,9 +1,9 @@
 package c
 
 import (
-	"github.com/therecipe/qt/core"
+	"github.com/hemkantSplat/qt/core"
 
-	_ "github.com/therecipe/qt/internal/cmd/moc/test/sub/conf"
+	_ "github.com/hemkantSplat/qt/internal/cmd/moc/test/sub/conf"
 )
 
 type StructSubGoC struct{}

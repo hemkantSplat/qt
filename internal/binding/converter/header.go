@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/therecipe/qt/internal/binding/parser"
+	"github.com/hemkantSplat/qt/internal/binding/parser"
 )
 
 func GoHeaderName(f *parser.Function) string {
@@ -281,7 +281,7 @@ func GoHeaderInput(f *parser.Function) string {
 	return bb.String()
 }
 
-//TODO: combine with above
+// TODO: combine with above
 func GoHeaderInputSignalFunction(f *parser.Function) string {
 	var bb = new(bytes.Buffer)
 	defer bb.Reset()

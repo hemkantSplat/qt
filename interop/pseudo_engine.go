@@ -3,9 +3,9 @@ package interop
 import (
 	"unsafe"
 
-	"github.com/therecipe/qt"
+	"github.com/hemkantSplat/qt"
 
-	"github.com/therecipe/qt/core"
+	"github.com/hemkantSplat/qt/core"
 )
 
 //TODO: this == nil checks
@@ -22,7 +22,7 @@ type PseudoQJSEngine_ITF interface {
 	PseudoQJSEngine_PTR() *PseudoQJSEngine
 }
 
-//TODO: make it possible to subclass without invoking qtmoc
+// TODO: make it possible to subclass without invoking qtmoc
 func (this *PseudoQJSEngine) Pointer() unsafe.Pointer {
 	return this.QObject.Pointer()
 }

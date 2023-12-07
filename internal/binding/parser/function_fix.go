@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/therecipe/qt/internal/utils"
+	"github.com/hemkantSplat/qt/internal/utils"
 )
 
 func (f *Function) fix() {

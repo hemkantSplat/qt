@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/therecipe/qt/charts"
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/multimedia"
-	"github.com/therecipe/qt/widgets"
+	"github.com/hemkantSplat/qt/charts"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/multimedia"
+	"github.com/hemkantSplat/qt/widgets"
 )
 
 type Widget struct {

@@ -1,7 +1,7 @@
 package model
 
 import (
-	"github.com/therecipe/qt/core"
+	"github.com/hemkantSplat/qt/core"
 )
 
 type ViewModel struct {
@@ -91,7 +91,7 @@ func (m *ViewModel) data(index *core.QModelIndex, role int) *core.QVariant {
 	return core.NewQVariant()
 }
 
-//needed only for qml
+// needed only for qml
 func (m *ViewModel) roleNames() map[int]*core.QByteArray {
 	return map[int]*core.QByteArray{
 		int(core.Qt__UserRole) + 1: core.NewQByteArray2("ID", -1),

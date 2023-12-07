@@ -1,11 +1,12 @@
+//go:build !minimal
 // +build !minimal
 
 package location
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/internal"
-	"github.com/therecipe/qt/positioning"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/internal"
+	"github.com/hemkantSplat/qt/positioning"
 	"unsafe"
 )
 
@@ -57,8 +58,9 @@ func NewQGeoCodeReplyFromPointer(ptr unsafe.Pointer) (n *QGeoCodeReply) {
 	return
 }
 
+// QGeoCodeReply::Error
+//
 //go:generate stringer -type=QGeoCodeReply__Error
-//QGeoCodeReply::Error
 type QGeoCodeReply__Error int64
 
 const (
@@ -254,8 +256,9 @@ func NewQGeoManeuverFromPointer(ptr unsafe.Pointer) (n *QGeoManeuver) {
 	return
 }
 
+// QGeoManeuver::InstructionDirection
+//
 //go:generate stringer -type=QGeoManeuver__InstructionDirection
-//QGeoManeuver::InstructionDirection
 type QGeoManeuver__InstructionDirection int64
 
 const (
@@ -849,8 +852,9 @@ func NewQGeoRouteReplyFromPointer(ptr unsafe.Pointer) (n *QGeoRouteReply) {
 	return
 }
 
+// QGeoRouteReply::Error
+//
 //go:generate stringer -type=QGeoRouteReply__Error
-//QGeoRouteReply::Error
 type QGeoRouteReply__Error int64
 
 const (
@@ -1194,8 +1198,9 @@ func NewQGeoRouteRequestFromPointer(ptr unsafe.Pointer) (n *QGeoRouteRequest) {
 	return
 }
 
+// QGeoRouteRequest::TravelMode
+//
 //go:generate stringer -type=QGeoRouteRequest__TravelMode
-//QGeoRouteRequest::TravelMode
 type QGeoRouteRequest__TravelMode int64
 
 const (
@@ -1206,8 +1211,9 @@ const (
 	QGeoRouteRequest__TruckTravel         QGeoRouteRequest__TravelMode = QGeoRouteRequest__TravelMode(0x0010)
 )
 
+// QGeoRouteRequest::FeatureType
+//
 //go:generate stringer -type=QGeoRouteRequest__FeatureType
-//QGeoRouteRequest::FeatureType
 type QGeoRouteRequest__FeatureType int64
 
 const (
@@ -1223,8 +1229,9 @@ const (
 	QGeoRouteRequest__TrafficFeature       QGeoRouteRequest__FeatureType = QGeoRouteRequest__FeatureType(0x00000100)
 )
 
+// QGeoRouteRequest::FeatureWeight
+//
 //go:generate stringer -type=QGeoRouteRequest__FeatureWeight
-//QGeoRouteRequest::FeatureWeight
 type QGeoRouteRequest__FeatureWeight int64
 
 const (
@@ -1235,8 +1242,9 @@ const (
 	QGeoRouteRequest__DisallowFeatureWeight QGeoRouteRequest__FeatureWeight = QGeoRouteRequest__FeatureWeight(0x00000008)
 )
 
+// QGeoRouteRequest::RouteOptimization
+//
 //go:generate stringer -type=QGeoRouteRequest__RouteOptimization
-//QGeoRouteRequest::RouteOptimization
 type QGeoRouteRequest__RouteOptimization int64
 
 const (
@@ -1246,8 +1254,9 @@ const (
 	QGeoRouteRequest__MostScenicRoute   QGeoRouteRequest__RouteOptimization = QGeoRouteRequest__RouteOptimization(0x0008)
 )
 
+// QGeoRouteRequest::SegmentDetail
+//
 //go:generate stringer -type=QGeoRouteRequest__SegmentDetail
-//QGeoRouteRequest::SegmentDetail
 type QGeoRouteRequest__SegmentDetail int64
 
 const (
@@ -1255,8 +1264,9 @@ const (
 	QGeoRouteRequest__BasicSegmentData QGeoRouteRequest__SegmentDetail = QGeoRouteRequest__SegmentDetail(0x0001)
 )
 
+// QGeoRouteRequest::ManeuverDetail
+//
 //go:generate stringer -type=QGeoRouteRequest__ManeuverDetail
-//QGeoRouteRequest::ManeuverDetail
 type QGeoRouteRequest__ManeuverDetail int64
 
 const (
@@ -2532,8 +2542,9 @@ func NewQGeoServiceProviderFromPointer(ptr unsafe.Pointer) (n *QGeoServiceProvid
 	return
 }
 
+// QGeoServiceProvider::Error
+//
 //go:generate stringer -type=QGeoServiceProvider__Error
-//QGeoServiceProvider::Error
 type QGeoServiceProvider__Error int64
 
 const (
@@ -2545,8 +2556,9 @@ const (
 	QGeoServiceProvider__LoaderError                   QGeoServiceProvider__Error = QGeoServiceProvider__Error(5)
 )
 
+// QGeoServiceProvider::RoutingFeature
+//
 //go:generate stringer -type=QGeoServiceProvider__RoutingFeature
-//QGeoServiceProvider::RoutingFeature
 type QGeoServiceProvider__RoutingFeature int64
 
 var (
@@ -2560,8 +2572,9 @@ var (
 	QGeoServiceProvider__AnyRoutingFeatures         QGeoServiceProvider__RoutingFeature = QGeoServiceProvider__RoutingFeature(0)
 )
 
+// QGeoServiceProvider::GeocodingFeature
+//
 //go:generate stringer -type=QGeoServiceProvider__GeocodingFeature
-//QGeoServiceProvider::GeocodingFeature
 type QGeoServiceProvider__GeocodingFeature int64
 
 var (
@@ -2573,8 +2586,9 @@ var (
 	QGeoServiceProvider__AnyGeocodingFeatures      QGeoServiceProvider__GeocodingFeature = QGeoServiceProvider__GeocodingFeature(0)
 )
 
+// QGeoServiceProvider::MappingFeature
+//
 //go:generate stringer -type=QGeoServiceProvider__MappingFeature
-//QGeoServiceProvider::MappingFeature
 type QGeoServiceProvider__MappingFeature int64
 
 var (
@@ -2585,8 +2599,9 @@ var (
 	QGeoServiceProvider__AnyMappingFeatures      QGeoServiceProvider__MappingFeature = QGeoServiceProvider__MappingFeature(0)
 )
 
+// QGeoServiceProvider::PlacesFeature
+//
 //go:generate stringer -type=QGeoServiceProvider__PlacesFeature
-//QGeoServiceProvider::PlacesFeature
 type QGeoServiceProvider__PlacesFeature int64
 
 var (
@@ -2605,8 +2620,9 @@ var (
 	QGeoServiceProvider__AnyPlacesFeatures           QGeoServiceProvider__PlacesFeature = QGeoServiceProvider__PlacesFeature(0)
 )
 
+// QGeoServiceProvider::NavigationFeature
+//
 //go:generate stringer -type=QGeoServiceProvider__NavigationFeature
-//QGeoServiceProvider::NavigationFeature
 type QGeoServiceProvider__NavigationFeature int64
 
 var (
@@ -3286,8 +3302,9 @@ func NewQLocationFromPointer(ptr unsafe.Pointer) (n *QLocation) {
 func (ptr *QLocation) DestroyQLocation() {
 }
 
+// QLocation::Visibility
+//
 //go:generate stringer -type=QLocation__Visibility
-//QLocation::Visibility
 type QLocation__Visibility int64
 
 const (
@@ -3507,8 +3524,9 @@ func NewQPlaceContentFromPointer(ptr unsafe.Pointer) (n *QPlaceContent) {
 	return
 }
 
+// QPlaceContent::Type
+//
 //go:generate stringer -type=QPlaceContent__Type
-//QPlaceContent::Type
 type QPlaceContent__Type int64
 
 const (
@@ -3795,8 +3813,9 @@ func NewQPlaceIdReplyFromPointer(ptr unsafe.Pointer) (n *QPlaceIdReply) {
 	return
 }
 
+// QPlaceIdReply::OperationType
+//
 //go:generate stringer -type=QPlaceIdReply__OperationType
-//QPlaceIdReply::OperationType
 type QPlaceIdReply__OperationType int64
 
 const (
@@ -4178,8 +4197,9 @@ func NewQPlaceReplyFromPointer(ptr unsafe.Pointer) (n *QPlaceReply) {
 	return
 }
 
+// QPlaceReply::Error
+//
 //go:generate stringer -type=QPlaceReply__Error
-//QPlaceReply::Error
 type QPlaceReply__Error int64
 
 const (
@@ -4195,8 +4215,9 @@ const (
 	QPlaceReply__UnknownError              QPlaceReply__Error = QPlaceReply__Error(9)
 )
 
+// QPlaceReply::Type
+//
 //go:generate stringer -type=QPlaceReply__Type
-//QPlaceReply::Type
 type QPlaceReply__Type int64
 
 const (
@@ -4395,8 +4416,9 @@ func NewQPlaceSearchRequestFromPointer(ptr unsafe.Pointer) (n *QPlaceSearchReque
 	return
 }
 
+// QPlaceSearchRequest::RelevanceHint
+//
 //go:generate stringer -type=QPlaceSearchRequest__RelevanceHint
-//QPlaceSearchRequest::RelevanceHint
 type QPlaceSearchRequest__RelevanceHint int64
 
 const (
@@ -4447,8 +4469,9 @@ func NewQPlaceSearchResultFromPointer(ptr unsafe.Pointer) (n *QPlaceSearchResult
 	return
 }
 
+// QPlaceSearchResult::SearchResultType
+//
 //go:generate stringer -type=QPlaceSearchResult__SearchResultType
-//QPlaceSearchResult::SearchResultType
 type QPlaceSearchResult__SearchResultType int64
 
 const (

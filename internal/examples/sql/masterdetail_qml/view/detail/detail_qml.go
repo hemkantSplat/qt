@@ -1,11 +1,12 @@
+//go:build qml
 // +build qml
 
 package detail
 
 import (
-	"github.com/therecipe/qt/quick"
+	"github.com/hemkantSplat/qt/quick"
 
-	"github.com/therecipe/qt/internal/examples/sql/masterdetail_qml/controller"
+	"github.com/hemkantSplat/qt/internal/examples/sql/masterdetail_qml/controller"
 )
 
 func init() {

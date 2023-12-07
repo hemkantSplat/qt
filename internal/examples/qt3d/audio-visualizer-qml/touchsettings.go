@@ -4,8 +4,8 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/gui"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/gui"
 )
 
 type TouchSettings struct {

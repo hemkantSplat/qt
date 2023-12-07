@@ -1,15 +1,16 @@
+//go:build !minimal
 // +build !minimal
 
 package webengine
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/gui"
-	"github.com/therecipe/qt/internal"
-	"github.com/therecipe/qt/network"
-	"github.com/therecipe/qt/printsupport"
-	"github.com/therecipe/qt/webchannel"
-	"github.com/therecipe/qt/widgets"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/gui"
+	"github.com/hemkantSplat/qt/internal"
+	"github.com/hemkantSplat/qt/network"
+	"github.com/hemkantSplat/qt/printsupport"
+	"github.com/hemkantSplat/qt/webchannel"
+	"github.com/hemkantSplat/qt/widgets"
 	"unsafe"
 )
 
@@ -295,8 +296,9 @@ func NewQQuickWebEngineProfileFromPointer(ptr unsafe.Pointer) (n *QQuickWebEngin
 func (ptr *QQuickWebEngineProfile) DestroyQQuickWebEngineProfile() {
 }
 
+// QQuickWebEngineProfile::HttpCacheType
+//
 //go:generate stringer -type=QQuickWebEngineProfile__HttpCacheType
-//QQuickWebEngineProfile::HttpCacheType
 type QQuickWebEngineProfile__HttpCacheType int64
 
 const (
@@ -305,8 +307,9 @@ const (
 	QQuickWebEngineProfile__NoCache         QQuickWebEngineProfile__HttpCacheType = QQuickWebEngineProfile__HttpCacheType(2)
 )
 
+// QQuickWebEngineProfile::PersistentCookiesPolicy
+//
 //go:generate stringer -type=QQuickWebEngineProfile__PersistentCookiesPolicy
-//QQuickWebEngineProfile::PersistentCookiesPolicy
 type QQuickWebEngineProfile__PersistentCookiesPolicy int64
 
 const (
@@ -871,8 +874,9 @@ func NewQQuickWebEngineScriptFromPointer(ptr unsafe.Pointer) (n *QQuickWebEngine
 func (ptr *QQuickWebEngineScript) DestroyQQuickWebEngineScript() {
 }
 
+// QQuickWebEngineScript::InjectionPoint
+//
 //go:generate stringer -type=QQuickWebEngineScript__InjectionPoint
-//QQuickWebEngineScript::InjectionPoint
 type QQuickWebEngineScript__InjectionPoint int64
 
 const (
@@ -881,8 +885,9 @@ const (
 	QQuickWebEngineScript__DocumentCreation QQuickWebEngineScript__InjectionPoint = QQuickWebEngineScript__InjectionPoint(2)
 )
 
+// QQuickWebEngineScript::ScriptWorldId
+//
 //go:generate stringer -type=QQuickWebEngineScript__ScriptWorldId
-//QQuickWebEngineScript::ScriptWorldId
 type QQuickWebEngineScript__ScriptWorldId int64
 
 const (
@@ -1246,8 +1251,9 @@ func NewQWebEngineCertificateErrorFromPointer(ptr unsafe.Pointer) (n *QWebEngine
 func (ptr *QWebEngineCertificateError) DestroyQWebEngineCertificateError() {
 }
 
+// QWebEngineCertificateError::Error
+//
 //go:generate stringer -type=QWebEngineCertificateError__Error
-//QWebEngineCertificateError::Error
 type QWebEngineCertificateError__Error int64
 
 const (
@@ -1767,8 +1773,9 @@ func NewQWebEngineHttpRequestFromPointer(ptr unsafe.Pointer) (n *QWebEngineHttpR
 	return
 }
 
+// QWebEngineHttpRequest::Method
+//
 //go:generate stringer -type=QWebEngineHttpRequest__Method
-//QWebEngineHttpRequest::Method
 type QWebEngineHttpRequest__Method int64
 
 const (
@@ -2230,8 +2237,9 @@ func NewQWebEnginePageFromPointer(ptr unsafe.Pointer) (n *QWebEnginePage) {
 	return
 }
 
+// QWebEnginePage::FileSelectionMode
+//
 //go:generate stringer -type=QWebEnginePage__FileSelectionMode
-//QWebEnginePage::FileSelectionMode
 type QWebEnginePage__FileSelectionMode int64
 
 const (
@@ -2239,8 +2247,9 @@ const (
 	QWebEnginePage__FileSelectOpenMultiple QWebEnginePage__FileSelectionMode = QWebEnginePage__FileSelectionMode(1)
 )
 
+// QWebEnginePage::JavaScriptConsoleMessageLevel
+//
 //go:generate stringer -type=QWebEnginePage__JavaScriptConsoleMessageLevel
-//QWebEnginePage::JavaScriptConsoleMessageLevel
 type QWebEnginePage__JavaScriptConsoleMessageLevel int64
 
 const (
@@ -2249,8 +2258,9 @@ const (
 	QWebEnginePage__ErrorMessageLevel   QWebEnginePage__JavaScriptConsoleMessageLevel = QWebEnginePage__JavaScriptConsoleMessageLevel(2)
 )
 
+// QWebEnginePage::WebAction
+//
 //go:generate stringer -type=QWebEnginePage__WebAction
-//QWebEnginePage::WebAction
 type QWebEnginePage__WebAction int64
 
 const (
@@ -2302,8 +2312,9 @@ const (
 	QWebEnginePage__WebActionCount             QWebEnginePage__WebAction = QWebEnginePage__WebAction(45)
 )
 
+// QWebEnginePage::WebWindowType
+//
 //go:generate stringer -type=QWebEnginePage__WebWindowType
-//QWebEnginePage::WebWindowType
 type QWebEnginePage__WebWindowType int64
 
 const (
@@ -2313,8 +2324,9 @@ const (
 	QWebEnginePage__WebBrowserBackgroundTab QWebEnginePage__WebWindowType = QWebEnginePage__WebWindowType(3)
 )
 
+// QWebEnginePage::PermissionPolicy
+//
 //go:generate stringer -type=QWebEnginePage__PermissionPolicy
-//QWebEnginePage::PermissionPolicy
 type QWebEnginePage__PermissionPolicy int64
 
 const (
@@ -2323,8 +2335,9 @@ const (
 	QWebEnginePage__PermissionDeniedByUser  QWebEnginePage__PermissionPolicy = QWebEnginePage__PermissionPolicy(2)
 )
 
+// QWebEnginePage::NavigationType
+//
 //go:generate stringer -type=QWebEnginePage__NavigationType
-//QWebEnginePage::NavigationType
 type QWebEnginePage__NavigationType int64
 
 const (
@@ -2336,8 +2349,9 @@ const (
 	QWebEnginePage__NavigationTypeOther         QWebEnginePage__NavigationType = QWebEnginePage__NavigationType(5)
 )
 
+// QWebEnginePage::FindFlag
+//
 //go:generate stringer -type=QWebEnginePage__FindFlag
-//QWebEnginePage::FindFlag
 type QWebEnginePage__FindFlag int64
 
 const (
@@ -2345,8 +2359,9 @@ const (
 	QWebEnginePage__FindCaseSensitively QWebEnginePage__FindFlag = QWebEnginePage__FindFlag(2)
 )
 
+// QWebEnginePage::Feature
+//
 //go:generate stringer -type=QWebEnginePage__Feature
-//QWebEnginePage::Feature
 type QWebEnginePage__Feature int64
 
 const (
@@ -3283,8 +3298,9 @@ func NewQWebEngineProfileFromPointer(ptr unsafe.Pointer) (n *QWebEngineProfile) 
 	return
 }
 
+// QWebEngineProfile::HttpCacheType
+//
 //go:generate stringer -type=QWebEngineProfile__HttpCacheType
-//QWebEngineProfile::HttpCacheType
 type QWebEngineProfile__HttpCacheType int64
 
 const (
@@ -3293,8 +3309,9 @@ const (
 	QWebEngineProfile__NoCache         QWebEngineProfile__HttpCacheType = QWebEngineProfile__HttpCacheType(2)
 )
 
+// QWebEngineProfile::PersistentCookiesPolicy
+//
 //go:generate stringer -type=QWebEngineProfile__PersistentCookiesPolicy
-//QWebEngineProfile::PersistentCookiesPolicy
 type QWebEngineProfile__PersistentCookiesPolicy int64
 
 const (
@@ -3848,8 +3865,9 @@ func NewQWebEngineScriptFromPointer(ptr unsafe.Pointer) (n *QWebEngineScript) {
 func (ptr *QWebEngineScript) DestroyQWebEngineScript() {
 }
 
+// QWebEngineScript::InjectionPoint
+//
 //go:generate stringer -type=QWebEngineScript__InjectionPoint
-//QWebEngineScript::InjectionPoint
 type QWebEngineScript__InjectionPoint int64
 
 const (
@@ -3858,8 +3876,9 @@ const (
 	QWebEngineScript__DocumentCreation QWebEngineScript__InjectionPoint = QWebEngineScript__InjectionPoint(2)
 )
 
+// QWebEngineScript::ScriptWorldId
+//
 //go:generate stringer -type=QWebEngineScript__ScriptWorldId
-//QWebEngineScript::ScriptWorldId
 type QWebEngineScript__ScriptWorldId int64
 
 const (
@@ -3955,8 +3974,9 @@ func NewQWebEngineSettingsFromPointer(ptr unsafe.Pointer) (n *QWebEngineSettings
 	return
 }
 
+// QWebEngineSettings::FontFamily
+//
 //go:generate stringer -type=QWebEngineSettings__FontFamily
-//QWebEngineSettings::FontFamily
 type QWebEngineSettings__FontFamily int64
 
 const (
@@ -3969,8 +3989,9 @@ const (
 	QWebEngineSettings__PictographFont QWebEngineSettings__FontFamily = QWebEngineSettings__FontFamily(6)
 )
 
+// QWebEngineSettings::WebAttribute
+//
 //go:generate stringer -type=QWebEngineSettings__WebAttribute
-//QWebEngineSettings::WebAttribute
 type QWebEngineSettings__WebAttribute int64
 
 const (
@@ -4007,8 +4028,9 @@ const (
 	QWebEngineSettings__PdfViewerEnabled                    QWebEngineSettings__WebAttribute = QWebEngineSettings__WebAttribute(30)
 )
 
+// QWebEngineSettings::FontSize
+//
 //go:generate stringer -type=QWebEngineSettings__FontSize
-//QWebEngineSettings::FontSize
 type QWebEngineSettings__FontSize int64
 
 const (
@@ -4018,8 +4040,9 @@ const (
 	QWebEngineSettings__DefaultFixedFontSize   QWebEngineSettings__FontSize = QWebEngineSettings__FontSize(3)
 )
 
+// QWebEngineSettings::UnknownUrlSchemePolicy
+//
 //go:generate stringer -type=QWebEngineSettings__UnknownUrlSchemePolicy
-//QWebEngineSettings::UnknownUrlSchemePolicy
 type QWebEngineSettings__UnknownUrlSchemePolicy int64
 
 const (
@@ -4173,8 +4196,9 @@ func NewQWebEngineUrlRequestInfoFromPointer(ptr unsafe.Pointer) (n *QWebEngineUr
 func (ptr *QWebEngineUrlRequestInfo) DestroyQWebEngineUrlRequestInfo() {
 }
 
+// QWebEngineUrlRequestInfo::ResourceType
+//
 //go:generate stringer -type=QWebEngineUrlRequestInfo__ResourceType
-//QWebEngineUrlRequestInfo::ResourceType
 type QWebEngineUrlRequestInfo__ResourceType int64
 
 const (
@@ -4199,8 +4223,9 @@ const (
 	QWebEngineUrlRequestInfo__ResourceTypeUnknown        QWebEngineUrlRequestInfo__ResourceType = QWebEngineUrlRequestInfo__ResourceType(255)
 )
 
+// QWebEngineUrlRequestInfo::NavigationType
+//
 //go:generate stringer -type=QWebEngineUrlRequestInfo__NavigationType
-//QWebEngineUrlRequestInfo::NavigationType
 type QWebEngineUrlRequestInfo__NavigationType int64
 
 const (
@@ -4479,8 +4504,9 @@ func NewQWebEngineUrlRequestJobFromPointer(ptr unsafe.Pointer) (n *QWebEngineUrl
 func (ptr *QWebEngineUrlRequestJob) DestroyQWebEngineUrlRequestJob() {
 }
 
+// QWebEngineUrlRequestJob::Error
+//
 //go:generate stringer -type=QWebEngineUrlRequestJob__Error
-//QWebEngineUrlRequestJob::Error
 type QWebEngineUrlRequestJob__Error int64
 
 const (
@@ -4709,8 +4735,9 @@ func NewQWebEngineUrlSchemeFromPointer(ptr unsafe.Pointer) (n *QWebEngineUrlSche
 	return
 }
 
+// QWebEngineUrlScheme::Syntax
+//
 //go:generate stringer -type=QWebEngineUrlScheme__Syntax
-//QWebEngineUrlScheme::Syntax
 type QWebEngineUrlScheme__Syntax int64
 
 const (
@@ -4720,16 +4747,18 @@ const (
 	QWebEngineUrlScheme__Path                       QWebEngineUrlScheme__Syntax = QWebEngineUrlScheme__Syntax(3)
 )
 
+// QWebEngineUrlScheme::SpecialPort
+//
 //go:generate stringer -type=QWebEngineUrlScheme__SpecialPort
-//QWebEngineUrlScheme::SpecialPort
 type QWebEngineUrlScheme__SpecialPort int64
 
 const (
 	QWebEngineUrlScheme__PortUnspecified QWebEngineUrlScheme__SpecialPort = QWebEngineUrlScheme__SpecialPort(-1)
 )
 
+// QWebEngineUrlScheme::Flag
+//
 //go:generate stringer -type=QWebEngineUrlScheme__Flag
-//QWebEngineUrlScheme::Flag
 type QWebEngineUrlScheme__Flag int64
 
 const (

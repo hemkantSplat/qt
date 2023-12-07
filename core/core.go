@@ -11,9 +11,9 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/therecipe/qt"
-	"github.com/therecipe/qt/internal"
-	"github.com/therecipe/qt/interop/gow"
+	"github.com/hemkantSplat/qt"
+	"github.com/hemkantSplat/qt/internal"
+	"github.com/hemkantSplat/qt/interop/gow"
 )
 
 func interfaceToQListWidgetItemArray(i interface{}) []*QModelIndex {

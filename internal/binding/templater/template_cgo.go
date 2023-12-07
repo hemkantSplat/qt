@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/therecipe/qt/internal/binding/parser"
-	"github.com/therecipe/qt/internal/utils"
+	"github.com/hemkantSplat/qt/internal/binding/parser"
+	"github.com/hemkantSplat/qt/internal/utils"
 )
 
 func cleanLibs(module string, mode int) []string {
@@ -32,7 +32,7 @@ func cleanLibs(module string, mode int) []string {
 	return out
 }
 
-//needed for static linking
+// needed for static linking
 func GetiOSClang(buildTarget, _, path string) []string {
 	var tmp = CgoTemplate("build_static", path, buildTarget, NONE, "main", "")
 

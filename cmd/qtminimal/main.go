@@ -8,10 +8,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/therecipe/qt/internal/cmd"
-	"github.com/therecipe/qt/internal/cmd/minimal"
+	"github.com/hemkantSplat/qt/internal/cmd"
+	"github.com/hemkantSplat/qt/internal/cmd/minimal"
 
-	"github.com/therecipe/qt/internal/utils"
+	"github.com/hemkantSplat/qt/internal/utils"
 )
 
 func main() {

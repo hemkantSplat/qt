@@ -209,7 +209,7 @@ func QT_VAGRANT() bool {
 	return os.Getenv("QT_VAGRANT") == "true"
 }
 
-//TODO: use qmake props
+// TODO: use qmake props
 func ToolPath(tool, target string) string {
 	if dir := QT_QMAKE_DIR(); dir != "" {
 		return filepath.Join(dir, tool)
@@ -289,7 +289,7 @@ func ToolPath(tool, target string) string {
 	return ""
 }
 
-//TODO: detect webkit support automatically
+// TODO: detect webkit support automatically
 func QT_WEBKIT() bool {
 	return os.Getenv("QT_WEBKIT") == "true"
 }
@@ -423,7 +423,7 @@ func QT_GEN_QUICK_EXTRAS() bool {
 func GoList(args ...string) *exec.Cmd {
 	cmd := exec.Command("go", "list")
 	if UseGOMOD("") {
-		if !(strings.Contains(strings.Join(args, "|"), "github.com/therecipe/qt/internal") && !strings.Contains(strings.Join(args, "|"), "github.com/therecipe/qt/internal/binding/runtime")) {
+		if !(strings.Contains(strings.Join(args, "|"), "github.com/hemkantSplat/qt/internal") && !strings.Contains(strings.Join(args, "|"), "github.com/hemkantSplat/qt/internal/binding/runtime")) {
 			cmd.Args = append(cmd.Args, GOFLAGS())
 		} else if GOVERSION_NUM() >= 114 {
 			cmd.Args = append(cmd.Args, "-mod=mod")

@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/therecipe/qt/internal/utils"
+	"github.com/hemkantSplat/qt/internal/utils"
 )
 
 type Function struct {
@@ -91,8 +91,8 @@ func (f *Function) register(m string) {
 	}
 }
 
-//TODO: multipoly [][]string
-//TODO: connect/disconnect slot functions + add necessary SIGNAL_* functions (check first if really needed)
+// TODO: multipoly [][]string
+// TODO: connect/disconnect slot functions + add necessary SIGNAL_* functions (check first if really needed)
 func (f *Function) PossiblePolymorphicDerivations(self bool) ([]string, string) {
 	fc, _ := f.Class()
 
@@ -266,7 +266,7 @@ func (f *Function) IsJNIGeneric() bool {
 	return false
 }
 
-//TODO:
+// TODO:
 func (f *Function) IsSupported() bool {
 
 	if utils.QT_API_NUM(utils.QT_VERSION()) >= 5140 { //TODO: 5.14.0
@@ -590,7 +590,7 @@ func IsBlockedDefault() []string {
 	}
 }
 
-//TODO: combine
+// TODO: combine
 func (f *Function) IsDerivedFromVirtual() bool {
 	if f.Virtual != "non" {
 		return true
@@ -625,7 +625,7 @@ func (f *Function) IsDerivedFromVirtual() bool {
 	return false
 }
 
-//TODO: combine
+// TODO: combine
 func (f *Function) IsDerivedFromImpure() bool {
 	if f.Static || f.Virtual == PURE {
 		return false

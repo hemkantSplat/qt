@@ -1,8 +1,8 @@
 package shared
 
 import (
-	"github.com/therecipe/qt/core"
-	"github.com/therecipe/qt/websockets"
+	"github.com/hemkantSplat/qt/core"
+	"github.com/hemkantSplat/qt/websockets"
 )
 
 type WebSocketClientWrapper struct {
